@@ -16,3 +16,24 @@ const getInputData = () => {
   let userNameTag = document.querySelector('#active-user');
   userNameTag.textContent = activeUser.name;
 };
+
+const sendData = () => {
+  console.log('Data sent');
+  const data = {
+    Username: 'Pandy',
+    Password: 'word',
+    Realname: 'Pandys',
+    Email: 'pandy.andy@dandy.se',
+    Country: 'PandyLand',
+  };
+
+  const options = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  };
+
+  fetch('/api', options);
+};
