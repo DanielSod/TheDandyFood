@@ -20,15 +20,16 @@ const getInputData = () => {
 const sendData = () => {
   console.log('Data sent');
   const data = {
-    Username: 'Pandy',
-    Password: 'word',
-    Realname: 'Pandys',
-    Email: 'pandy.andy@dandy.se',
+    Username: 'PandyTwo',
+    Password: 'wordtwo',
+    Realname: 'Pandystwo',
+    Email: 'pandy.andytwo@dandy.se',
     Country: 'PandyLand',
   };
 
+
   const options = {
-    method: 'POST',
+    method: 'GET',
     headers: {
       'Content-Type': 'application/json',
     },
@@ -36,4 +37,6 @@ const sendData = () => {
   };
 
   fetch('/api', options);
+
 };
+

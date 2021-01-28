@@ -6,9 +6,21 @@ app.listen(5500, () => console.log('listening at 5500'));
 app.use(express.static('public'));
 app.use(express.json({ limit: '1mb' }));
 
-// const database = new Datastore('dandyfood.db');
 
-// database.loadDatabase();
+
+const database = new Datastore('dandyfood.db');
+database.loadDatabase();
+console.log('Server is running');
+
+database.find({}, function (err, output){
+if(err){
+    console.log(err);
+}
+console.log(output);
+//console.log(output[0].Username);
+});
+
+
 
 // // database.insert({
 // //   Username: 'AndyPandy',
