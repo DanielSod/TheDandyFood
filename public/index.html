@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Dandy Food</title>
+    <style type="text/css">
+        body {
+            background: brown;
+        }
+    </style>
+    <script type="text/javascript">
+        const userArray = [];
+        let activeUser = {};
+
+        const getInputData = () => {
+            let userData = Array.from(document.querySelectorAll('#signup-form input')).reduce(
+                (acc, input) => ({ ...acc, [input.id]: input.value }),
+                {}
+            );
+
+            activeUser = userData;
+            userArray.push(activeUser);
+
+            console.log(activeUser);
+            console.log(userArray);
+
+            let userNameTag = document.querySelector('#active-user');
+            userNameTag.textContent = activeUser.name;
+        };
+
+
+
+        function sendData() {
+            console.log('Data sent');
+            const data = {
+                Username: 'PandyTwo',
+                Password: 'wordtwo',
+                Realname: 'Pandystwo',
+                Email: 'pandy.andytwo@dandy.se',
+                Country: 'PandyLand',
+            };
+
+            const options = {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            };
+
+            fetch('/api', options);
+        }
+    </script>
+
+</head>
+
+
+<body>
+    <h1 id="mainText">Food inspo fo y'all</h1>
+    <h2>Food is awesome</h2>
+    <button id="button" value="click me!" type="button"
+        style="height: 100px; width: 200px; background: yellow; color: blue;"></button>
+    <a href="/signup.html">Sign Up!</a>
+    <a href="/profile.html">Profile!</a>
+
+    <button id="sendData" onclick="sendData()">Send data</button>
+
+    <section id="displayuser">
+
+    </section>
+    <!--<script src="js/api.js"></script>-->
+
+
+</body>
+
+</html>

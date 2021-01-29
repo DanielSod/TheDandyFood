@@ -17,7 +17,9 @@ const getInputData = () => {
   userNameTag.textContent = activeUser.name;
 };
 
-const sendData = () => {
+document.querySelector('#active-user').addEventListener('click', sendData);
+
+function sendData() {
   console.log('Data sent');
   const data = {
     Username: 'PandyTwo',
@@ -27,9 +29,8 @@ const sendData = () => {
     Country: 'PandyLand',
   };
 
-
   const options = {
-    method: 'GET',
+    method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
@@ -37,6 +38,4 @@ const sendData = () => {
   };
 
   fetch('/api', options);
-
-};
-
+}

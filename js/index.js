@@ -6,21 +6,17 @@ app.listen(5500, () => console.log('listening at 5500'));
 app.use(express.static('public'));
 app.use(express.json({ limit: '1mb' }));
 
-
-
 const database = new Datastore('dandyfood.db');
 database.loadDatabase();
 console.log('Server is running');
 
-database.find({}, function (err, output){
-if(err){
+database.find({}, function (err, output) {
+  if (err) {
     console.log(err);
-}
-console.log(output);
-//console.log(output[0].Username);
+  }
+  console.log(output);
+  //console.log(output[0].Username);
 });
-
-
 
 // // database.insert({
 // //   Username: 'AndyPandy',
@@ -31,7 +27,7 @@ console.log(output);
 // // });
 
 app.post('/api', (request, response) => {
-  console.log(request);
+  console.log(request.body);
   //   const data = request.body;
   //   database.insert(data);
   //   console.log(database);
