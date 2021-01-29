@@ -22,11 +22,11 @@ document.querySelector('#active-user').addEventListener('click', sendData);
 function sendData() {
   console.log('Data sent');
   const data = {
-    Username: 'PandyTwo',
-    Password: 'wordtwo',
-    Realname: 'Pandystwo',
-    Email: 'pandy.andytwo@dandy.se',
-    Country: 'PandyLand',
+    Username: 'Boi1995',
+    Password: 'hemligt123',
+    Realname: 'Andreas',
+    Email: 'andreas@dandy.se',
+    Country: 'Sweden',
   };
 
   const options = {
@@ -38,4 +38,12 @@ function sendData() {
   };
 
   fetch('/api', options);
+}
+
+async function getData() {
+  console.log('Trying to get data');
+
+  const response = await fetch('/api');
+  const data = await response.json();
+  console.log(data);
 }
