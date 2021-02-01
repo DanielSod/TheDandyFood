@@ -33,7 +33,9 @@ app.get('/api', (request, response) => {
 });
 
 app.get('/api/:id', (request, response) => {
-  database.find({ Username: request.params.id }, function (err, data) {
+  let id = request.params.id;
+
+  database.findOne({ _id: id }, function (err, data) {
     if (err) {
       console.log(err);
     }
