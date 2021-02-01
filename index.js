@@ -13,7 +13,6 @@ database.loadDatabase();
 console.log('Server is running');
 
 app.post('/api', (request, response) => {
-  console.log(request.body);
   const data = request.body;
   database.insert(data);
 
@@ -25,10 +24,19 @@ app.post('/api', (request, response) => {
 });
 
 app.get('/api', (request, response) => {
-  database.find({}, function (err, output) {
+  database.find({}, function (err, data) {
     if (err) {
       console.log(err);
     }
     console.log(output);
+  });
+});
+
+app.get('/api/:id', (request, response) => {
+  database.find({ Username: request.params.id }, function (err, data) {
+    if (err) {
+      console.log(err);
+    }
+    response.json(data);
   });
 });

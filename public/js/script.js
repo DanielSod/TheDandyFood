@@ -47,3 +47,12 @@ async function getData() {
   const data = await response.json();
   console.log(data);
 }
+
+async function getSingleUser() {
+  console.log('Getting User');
+
+  const response = await fetch('/api/Boi1995');
+
+  const data = await response.json();
+  console.log(data);
+}
