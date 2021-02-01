@@ -65,7 +65,7 @@ async function getData() {
 
 //Testmetod för att hämta en specifik användare från databasen via backend.
 async function getSingleUser() {
-  const response = await fetch(`/api/${loggedInUser._id}`);
+  const response = await fetch(`/api/${loggedInUser.Username}`);
 
   const data = await response.json();
 
