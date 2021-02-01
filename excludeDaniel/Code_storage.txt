@@ -1,0 +1,55 @@
+
+git remote add origin https://github.com/DanielSod/TheDandyFood.git
+
+​
+latitude: 57.6546791
+​​
+longitude: 11.9045039
+
+
+ if ('userId' in Profile) {
+                const Userid = data.Userid;
+                const Username = data.Username;
+                const Password = data.Password;
+                const Realname = data.Realname;
+                const Email = data.Email;
+                const Country = data.Country;
+
+                document.getElementById('username').textContent = username;
+                document.getElementById('realname').textContent = realname;
+                document.getElementById('country').textContent = country;
+                    //console.log(position);
+
+                const data = { lat, lon };
+                const options = {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+
+                };
+                fetch('/api', options);
+
+
+
+// app.post('/api', (request, response) => {
+//     console.log(request);
+//       const data = request.body;
+    
+      // database.insert(data);
+      // console.log(database);
+      // response.json({
+      //   status: 'success',
+      //   latitude: data.lat,
+      //   longitude: data.lon,
+      // });
+  //});
+
+// // database.insert({
+// //   Username: 'AndyPandy',
+// //   Password: 'pass',
+// //   Realname: 'Andreas',
+// //   Email: 'pandy.andy@dandy.se',
+// //   Country: 'PandyLand',
+// // });
