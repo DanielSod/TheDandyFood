@@ -1,10 +1,6 @@
-//userArray och activeUser kan nog tas bort
-const userArray = [];
-let activeUser = {};
-
 //loggedInUser sätts vid login
 let loggedInUser = {
-  Username: 'PandyTwo',
+  Username: 'AndyTest',
   Password: 'wordtwo',
   Realname: 'Andreas',
   Email: 'pandy.andytwo@dandy.se',
@@ -15,40 +11,28 @@ let loggedInUser = {
 //Metod kallas på för att köras när sidan laddas.
 setDefaultValues(loggedInUser);
 
-//Test metod för att hämta upp data från ett formulär
-const getInputData = () => {
-  let userData = Array.from(document.querySelectorAll('#signup-form input')).reduce(
-    (acc, input) => ({ ...acc, [input.id]: input.value }),
-    {}
-  );
-
-  activeUser = userData;
-  userArray.push(activeUser);
-
-  console.log(activeUser);
-  console.log(userArray);
-
-  let userNameTag = document.querySelector('#active-user');
-  userNameTag.textContent = activeUser.name;
-};
-
 //Test metod för att skicka data till databas via backend
 function sendData() {
   console.log('Data sent');
-  const data = {
-    Username: 'Boi1995',
-    Password: 'hemligt123',
-    Realname: 'Andreas',
-    Email: 'andreas@dandy.se',
-    Country: 'Sweden',
+
+  const user = {
+    Username: document.querySelector('#edit-name').value,
+    Password: document.querySelector('#edit-email').value,
+    Realname: document.querySelector('#edit-country').value,
+    Email: document.querySelector('#edit-username').value,
+    Country: document.querySelector('#edit-password').value,
   };
+
+  console.log(user);
+
+  loggedInUser = user;
 
   const options = {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(data),
+    body: JSON.stringify(user),
   };
 
   fetch('/api', options);
@@ -74,9 +58,9 @@ async function getSingleUser() {
 
 //Metod för att sätta värden till formulär på edit profile sidan.
 function setDefaultValues(user) {
-  document.getElementById('edit-name').value = user.Realname;
-  document.getElementById('edit-email').value = user.Email;
-  document.getElementById('edit-country').value = user.Country;
-  document.getElementById('edit-username').value = user.Username;
-  document.getElementById('edit-password').value = user.Password;
+  document.querySelector('#edit-name').value = user.Realname;
+  document.querySelector('#edit-email').value = user.Email;
+  document.querySelector('#edit-country').value = user.Country;
+  document.querySelector('#edit-username').value = user.Username;
+  document.querySelector('#edit-password').value = user.Password;
 }
