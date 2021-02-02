@@ -1,17 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="">
 </head>
+
+<link rel="stylesheet" href="styles/general.css">
+<link rel="stylesheet" href="styles/styles.css">
+
 <body>
-    
+    <header>
+        <div class="nav-container">
+            <h1 class="logo">Logo</h1>
+            <nav>
+                <ul>
+                    <li><a href="addrecipe.html">Add recipe</a></li>
+                    <li><a href="mapview.html">Search</a></li>
+                    <li><a href="#">Wishlist</a></li>
+                </ul>
+            </nav>
+            <a href="signup.html">
+                <h1>Log in</h1>
+            </a>
+        </div>
+        <input type="search">
+    </header>
+    <main class="mapview-container">
+        <section class="recipe-list-section">
+            <div class="recipe-card-container"></div>
+        </section>
+        <section class="map-section">
+            <h1>Karta här!</h1>
+        </section>
+    </main>
+
+    <script src="/js/mapview.js"></script>
+    <script src="/js/script.js"></script>
 
 
-    <script>
-
-    </script>
-    
 </body>
+
 </html>
