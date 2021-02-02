@@ -1,43 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <link rel="stylesheet" href="../styles/styles.css">
+    <meta charset="utf-8" />
+    <title>Dandy Food</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="/styles/general.css">
 </head>
+
 
 <body>
     <div class="page-wrapper">
         <div class="inner-container">
-            <h1>Create Profile</h1>
-            <div class="image-container">
-                <img src="images/pasta.webp" alt="">
-            </div>
+            <h1>Sign Up</h1>
+            <button onclick="getSingleUser()">Get User</button>
             <form id="signup-form" action="#">
-                <input type="text" name="" id="name" placeholder="Name">
-                <input type="text" name="" id="email" placeholder="Email">
-                <input type="text" name="" id="country" placeholder="Country">
-                <input type="text" name="" id="username" placeholder="Username">
-                <input type="text" name="" id="password" placeholder="Password">
-                <input type="submit" value="Submit" onclick="getInputData()">
+                <input type="text" value="" id="edit-name" placeholder="Name">
+                <input type="email" name="" id="edit-email" placeholder="Email">
+                <input type="text" name="" id="edit-country" placeholder="Country">
+                <input type="text" name="" id="edit-username" placeholder="Username">
+                <input type="password" name="" id="edit-password" placeholder="Password">
+                <input type="submit" value="Submit" onclick="sendData()">
             </form>
         </div>
-        <div>
-            <h2 id="active-user">Name</h2>
-            <a href="/index.html">Main Menu</a>
-        </div>
-     
-
     </div>
-
-    <script src="js/script.js">
-    
-    </script>
+    <script src="js/script.js"></script>
 </body>
-
-
 
 </html>

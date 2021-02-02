@@ -1,14 +1,3 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body,
-html {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
 a {
   color: #fff;
   text-decoration: none;
@@ -18,9 +7,23 @@ a {
 /* CSS för Förstasidan*/
 .teaser-section {
   height: 60vh;
-  background-color: lightyellow;
+  background-color: rgb(54, 54, 150);
   display: flex;
   align-items: center;
+}
+
+.teaser-section-reversed {
+  background-color: white;
+  display: flex;
+  height: 60vh;
+}
+
+.teaser-section-reversed div {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .teaser-section div {
