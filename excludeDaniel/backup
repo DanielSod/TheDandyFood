@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dandy Food</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+
+
+<body>
+    
+    <div class="page-wrapper">
+        <div class="inner-container">
+            <h1>Create Profile</h1>
+            
+            <div>
+                <img src="" alt="profilbild" 
+                style="border: 5px; border-color: white;
+                width: 250px; height: 250px;">
+            </div>
+
+
+            <div>
+                <h2 id="active-user">Name</h2>
+                <a href="/index.html">Main Menu</a>
+            </div>
+            
+
+            <form id="signup-form" action="#">
+
+                <input type="text" name="" id="new-realname" placeholder="Name">
+                <input type="text" name="" id="new-email" placeholder="Email">
+                <input type="text" name="" id="new-country" placeholder="Country">
+                <input type="text" name="" id="new-username" placeholder="Username">
+                <input type="text" name="" id="new-password" placeholder="Password">
+                
+            </form>
+            
+
+            <button onClick="registerNewUser()"> Register User> </button>
+
+<hr>
+
+                <form id="signup-form" action="#">
+
+                    <input type="text" name="" id="new-realname" placeholder="Name">
+                    <input type="text" name="" id="new-email" placeholder="Email">
+                    <input type="text" name="" id="new-country" placeholder="Country">
+                    <input type="text" name="" id="new-username" placeholder="Username">
+                    <input type="text" name="" id="new-password" placeholder="Password">
+                    
+                </form>
+
+<hr>
+
+            <SCRIPT LANGUAGE="JavaScript">
+                        
+                async function sendData(){
+                    console.log('retrieving data ...');
+                    
+                    var realname = document.getElementById("realname").innerHTML = 'realname'; 
+                    var email = document.getElementById("email").style.color="red"; 
+                    var country = document.getElementById("country").style.color="red"; 
+                    var username = document.getElementById("username").style.color="red"; 
+                    var password = document.getElementById("password").style.color="poo"; 
+
+                    
+
+                    var elements = document.querySelectorAll("#signupform input[type=text]");
+                    
+                
+
+                        body: JSON.stringify(signupform);
+                        
+                        document.getElementById("signupform").innerHTML = 
+                            signupform.realname + ", " + signupform.email;
+                    
+                    console.log(arr);
+                    
+                    const options = {
+                        method: 'POST',
+                        headers: {
+                        'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(arr),
+                    };
+
+                    fetch('/api', options);
+                }
+            </SCRIPT>
+
+            <div>
+                <p id="demo"></p>
+
+                <script>
+            
+                </script> 
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+document.getElementById('new-realname').value = newUser.Realname,
+      document.getElementById('new-email').value = newUser.Email,
+      document.getElementById('new-country').value = newUser.Country,
+      document.getElementById('new-username').value = newUser.Username,
+      document.getElementById('new-password').value = newUser.Password
+      
+      
+// function displayNewUser(signupform) {
+//   document.getElementById('new-realname').value = newUser.Realname;
+//   document.getElementById('new-email').value = newUser.Email;
+//   document.getElementById('new-country').value = newUser.Country;
+//   document.getElementById('new-username').value = newUser.Username;
+//   document.getElementById('new-password').value = newUser.Password;
+// }
+
+
+
+
+function registerNewUser() {
+    const data = {
+      Realname = document.getElementById('new-realname'),
+      Email = document.getElementById('new-email'),
+      Country = document.getElementById('new-country'),
+      Username = document.getElementById('new-username'),
+      Password = document.getElementById('new-password')
+    };
+  
+    const options = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    };
+  
+    fetch('/api', options);
+  }
+
+  
+  
+  
+//  Array:
+        var person = ["John", "Doe", 46];
+
+//  Objects use names to access its "members". 
+//  In this example, person.firstName returns John:
+//  Object:
+        var person = {firstName:"John", lastName:"Doe", age:46};
+        
+        
+        
+
+// function newUser(Realname, Email, Country, Username, Password) {
+//     this.Realname = Realname;
+//     this.Email = Email;
+//     this.Country = Country;
+//     this.Username = Username;
+//     this.Password = Password;
+// }
+// newUser.Realname = 'Daniel är bäst';
+
+// var Daniel = new newUser("Daniel S", "dan@himlen", "I solen", "Gud", "Satan"); 
+
+
+
+
+// userArray.newUser = function() {
+    
+//     for (i = 0; i < this.length; i++) {
+//         this[i] = this[i].toUpperCase();
+//     }
+// };
+//   //Make an array, then call the myUcase method:
+// var newUser = ["Hanna", "bla mail", "jordens mitt", "Gudinna", "Hemlis"];
+// userArray.newUser(); 
+
+
+____________________
+
+<button onClick="registerNewUser()"> Register User> </button>
+
+<hr>
+
+</div>
+
+<form id="displayNewUser" action="#">
+
+<input type="text" name="" id="new-realname" placeholder="Name">
+<input type="text" name="" id="new-email" placeholder="Email">
+<input type="text" name="" id="new-country" placeholder="Country">
+<input type="text" name="" id="new-username" placeholder="Username">
+<input type="text" name="" id="new-password" placeholder="Password">
+
+</form>
+<hr>
+
+<button onClick="displayNewUser()"> Register User> </button>
+
+<hr>
+<div>
+<h2 id="active-user">Name</h2>
+<a href="/index.html">Main Menu</a>
+</div>
+
+
+</div>
+
+<script src="js/danscript.js">
+
+</script>
+____________________

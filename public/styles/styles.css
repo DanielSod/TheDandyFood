@@ -7,21 +7,15 @@ a {
 /* CSS för Förstasidan*/
 .teaser-section {
   height: 60vh;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(54, 54, 150);
   display: flex;
   align-items: center;
 }
 
 .teaser-section-reversed {
-  background-color: #1a2238;
+  background-color: white;
   display: flex;
   height: 60vh;
-  color: #fff;
-}
-
-.teaser-section-reversed button {
-  background-color: #fff;
-  color: #1a2238;
 }
 
 .teaser-section-reversed div {
@@ -44,49 +38,6 @@ a {
   flex-direction: column;
   justify-content: flex-start;
   gap: 40px;
-}
-
-/* CSS för mapview */
-.mapview-container {
-  display: flex;
-  width: 100%;
-  height: 60vh;
-}
-
-.mapview-container section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.recipe-list-section {
-  width: 30%;
-}
-
-.recipe-card-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  gap: 25px;
-}
-
-.recipe-card {
-  display: grid;
-  grid-template-columns: 40% 60%;
-  width: 80%;
-  height: 250px;
-  padding: 10px;
-  background-color: #1a2238;
-  color: #fff;
-  border-radius: 10px;
-}
-
-.map-section {
-  width: 70%;
 }
 
 /* CSS för formulär */

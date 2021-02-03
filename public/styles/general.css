@@ -9,36 +9,18 @@ html {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   min-height: 100vh;
   width: 100%;
-  background-color: rgb(255, 255, 255);
-}
-
-h1 {
-  font-size: 46px;
+  background-color: rgb(182, 101, 101);
 }
 
 header {
-  background-image: linear-gradient(184deg, #1a2238 70%, #ffffff calc(70% + 2px));
+  background-color: lightblue;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  gap: 40%;
+  justify-content: space-between;
   width: 100%;
-  padding: 10px 20px;
-  height: 40vh;
-}
-
-header input {
-  height: 55px;
-  width: 20%;
-  border: 4px solid #fff;
-  background-color: transparent;
-  border-radius: 10px;
-}
-
-header p {
-  font-size: 26px;
-  color: #fff;
+  padding: 0px 10px;
+  height: 30vh;
 }
 
 .nav-container {
@@ -52,26 +34,6 @@ header p {
 nav ul {
   display: flex;
   flex-direction: row;
-  gap: 40px;
+  gap: 30px;
   list-style: none;
-}
-
-nav ul a {
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 30px;
-  font-weight: bold;
-  transition: all 0.3s;
-}
-
-nav ul a:hover {
-  color: rgba(255, 255, 255, 1);
-}
-
-button {
-  color: #fff;
-  background-color: #1a2238;
-  padding: 10px 15px;
-  border-radius: 10px;
-  font-size: 26px;
-  border: none;
 }

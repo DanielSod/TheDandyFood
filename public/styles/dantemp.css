@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgb(182, 101, 101);
+}
+
+header {
+    background-color: lightblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0px 10px;
+    height: 30vh;
+}
+
+.nav-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    list-style: none;
+}
+
+
+.page-wrapper {
+    min-height: 100vh;
+    width: 100%;
+    background: radial-gradient(#3d4354, #1a2238);
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.main-section {
+    height: 60vh;
+    background-color: rgb(54, 54, 150);
+    display: flex;
+    align-items: center;
+}
+
+.detailstitel-container {
+    height: 60vh;
+    background-color: rgb(54, 54, 150);
+    display: flex;
+    align-items: center;
+    background: radial-gradient(#532704, #7d17d1);
+}
+
+.detailsingredients-container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    background: radial-gradient(#045329, #2a17d1);
+}
+
+
+.detailshowto-container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    background: radial-gradient(#045329, #ade28a);
+}
+
+<!-- -->
+
+.detailstitel-containerd {
+    width: 400px; height: 300px;
+    margin-top: 10%;
+    background: radial-gradient(#041953, #d19917);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.detailsingredients-containerd {
+    width: 400px; height: 300px;
+    margin-right: 70%;
+    background: radial-gradient(#045329, #7d17d1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.detailshowto-containerd {
+    width: 400px; height: 300px;
+    margin-bottom: 10%; margin-left: 70% ;
+
+    background: radial-gradient(#045053, #d11717);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    padding: 20px, 20px,20px,20px;
+}

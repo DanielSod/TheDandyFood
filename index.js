@@ -28,7 +28,7 @@ app.get('/api', (request, response) => {
     if (err) {
       console.log(err);
     }
-    response.json(data);
+    console.log(output);
   });
 });
 
