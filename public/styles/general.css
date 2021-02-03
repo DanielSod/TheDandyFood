@@ -20,7 +20,7 @@ header {
   justify-content: flex-start;
   gap: 40%;
   width: 100%;
-  padding: 0px 10px;
+  padding: 10px 20px;
   height: 40vh;
 }
 
@@ -43,9 +43,17 @@ header input {
 nav ul {
   display: flex;
   flex-direction: row;
-  gap: 30px;
+  gap: 40px;
   list-style: none;
 }
 
 nav ul a {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 30px;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+nav ul a:hover {
+  color: rgba(255, 255, 255, 1);
 }

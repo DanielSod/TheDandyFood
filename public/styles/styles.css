@@ -7,13 +7,13 @@ a {
 /* CSS för Förstasidan*/
 .teaser-section {
   height: 60vh;
-  background-color: rgb(54, 54, 150);
+  background-color: rgb(255, 255, 255);
   display: flex;
   align-items: center;
 }
 
 .teaser-section-reversed {
-  background-color: white;
+  background-color: #22313f;
   display: flex;
   height: 60vh;
 }
@@ -44,7 +44,7 @@ a {
 .mapview-container {
   display: flex;
   width: 100%;
-  height: 70vh;
+  height: 60vh;
 }
 
 .mapview-container section {
