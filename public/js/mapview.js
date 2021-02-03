@@ -1,4 +1,4 @@
-async function getMapData() {
+async function getRecipeData() {
   console.log('Trying to get data');
 
   const response = await fetch('/api');
@@ -17,14 +17,4 @@ async function getMapData() {
   }
 }
 
-{
-  /* <div class='recipe-card'>
-  <div>Bild</div>
-  <div class='description-container'>
-    <h1>Titel</h1>
-    <p>Text</p>
-  </div>
-</div>; */
-}
-
-getMapData();
+getRecipeData();

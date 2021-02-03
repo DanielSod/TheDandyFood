@@ -9,18 +9,27 @@ html {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   min-height: 100vh;
   width: 100%;
-  background-color: rgb(182, 101, 101);
+  background-color: rgb(255, 255, 255);
 }
 
 header {
-  background-color: lightblue;
+  background-image: linear-gradient(184deg, #22313f 70%, #ffffff calc(70% + 2px));
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 40%;
   width: 100%;
   padding: 0px 10px;
-  height: 30vh;
+  height: 40vh;
+}
+
+header input {
+  height: 55px;
+  width: 20%;
+  border: 4px solid #fff;
+  background-color: transparent;
+  border-radius: 10px;
 }
 
 .nav-container {
@@ -36,4 +45,7 @@ nav ul {
   flex-direction: row;
   gap: 30px;
   list-style: none;
+}
+
+nav ul a {
 }
