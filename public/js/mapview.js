@@ -5,13 +5,26 @@ async function getMapData() {
   const data = await response.json();
   console.log(data);
 
-  let html = data
-    .map(function (element) {
-      return '<div class="recipe-card">' + element.Username + '<div/>';
-    })
-    .join('');
+  let container = document.querySelector('.recipe-card-container');
 
-  document.querySelector('.recipe-card-container').innerHTML = html;
+  for (let i = 0; i < data.length; i++) {
+    container.innerHTML +=
+      '<div class="recipe-card"><div>Bild</div><div class="description-container"><h1>' +
+      data[i].Realname +
+      '</h1><p>' +
+      data[i].Username +
+      '</p></div></div>';
+  }
+}
+
+{
+  /* <div class='recipe-card'>
+  <div>Bild</div>
+  <div class='description-container'>
+    <h1>Titel</h1>
+    <p>Text</p>
+  </div>
+</div>; */
 }
 
 getMapData();

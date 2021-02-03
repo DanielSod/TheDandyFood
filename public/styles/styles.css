@@ -61,17 +61,23 @@ a {
 .recipe-card-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: start;
+  align-items: center;
   width: 100%;
   height: 100%;
   background-color: lime;
+  overflow: auto;
+  gap: 25px;
 }
 
 .recipe-card {
-  width: 60%;
-
-  margin-bottom: 2px;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  width: 80%;
+  height: 250px;
+  padding: 10px;
   background-color: red;
+  border-radius: 10px;
 }
 
 .map-section {
