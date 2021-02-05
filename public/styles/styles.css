@@ -40,6 +40,52 @@ a {
   gap: 40px;
 }
 
+<<<<<<< HEAD
+=======
+/* CSS för mapview */
+.mapview-container {
+  display: flex;
+  width: 100%;
+  min-height: 60vh;
+}
+
+.mapview-container section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.recipe-list-section {
+  width: 30%;
+}
+
+.recipe-card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  height: 60vh;
+  overflow: auto;
+  gap: 25px;
+}
+
+.recipe-card {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  width: 80%;
+  height: 150px;
+  padding: 10px;
+  background-color: #1a2238;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.map-section {
+  width: 70%;
+}
+
+>>>>>>> Andy
 /* CSS för formulär */
 .page-wrapper {
   min-height: 100vh;

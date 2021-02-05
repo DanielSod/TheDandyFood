@@ -9,18 +9,55 @@ html {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   min-height: 100vh;
   width: 100%;
+<<<<<<< HEAD
   background-color: rgb(182, 101, 101);
 }
 
 header {
   background-color: lightblue;
+=======
+  background-color: rgb(255, 255, 255);
+}
+
+h1 {
+  font-size: 24px;
+}
+
+header {
+  background-image: linear-gradient(
+    184deg,
+    #1a2238 70%,
+    #ffffff calc(70% + 2px)
+  );
+>>>>>>> Andy
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   width: 100%;
+<<<<<<< HEAD
   padding: 0px 10px;
   height: 30vh;
+=======
+  padding: 10px 20px;
+  height: 40vh;
+}
+
+header input {
+  height: 40px;
+  width: 25%;
+  border: 2px solid #fff;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 10px;
+  padding: 10px;
+  color: #fff;
+  font-size: 16px;
+}
+
+header p {
+  font-size: 16px;
+  color: #fff;
+>>>>>>> Andy
 }
 
 .nav-container {
@@ -37,3 +74,26 @@ nav ul {
   gap: 30px;
   list-style: none;
 }
+<<<<<<< HEAD
+=======
+
+nav ul a {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+nav ul a:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+button {
+  color: #fff;
+  background-color: #1a2238;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 16px;
+  border: none;
+}
+>>>>>>> Andy
