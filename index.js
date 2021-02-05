@@ -42,3 +42,15 @@ app.get('/api/:id', (request, response) => {
     response.json(data);
   });
 });
+
+app.get('/users/:id', (request, response) => {
+  let userName = request.params.id;
+  database.find({ Username: userName }, function (err, data) {
+    if (err) {
+      console.log(err);
+    }
+    console.log(data);
+    response.json(data);
+  });
+});
+
