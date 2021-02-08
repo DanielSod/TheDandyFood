@@ -11,6 +11,8 @@ function sendData() {
     Country: document.querySelector('#edit-password').value,
     };
 
+    user.favorites = [];
+
     console.log(user);
 
     loggedInUser = user;
