@@ -53,4 +53,3 @@ app.get('/users/:id', (request, response) => {
     response.json(data);
   });
 });
-
