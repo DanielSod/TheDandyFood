@@ -16,11 +16,11 @@ function sendData() {
   console.log('Data sent');
 
   const user = {
-    Username: document.querySelector('#edit-name').value,
-    Password: document.querySelector('#edit-email').value,
-    Realname: document.querySelector('#edit-country').value,
-    Email: document.querySelector('#edit-username').value,
-    Country: document.querySelector('#edit-password').value,
+    Username: document.querySelector('#edit-username').value,
+    Password: document.querySelector('#edit-password').value,
+    Realname: document.querySelector('#edit-name').value,
+    Email: document.querySelector('#edit-email').value,
+    Country: document.querySelector('#edit-country').value,
     Favorites: [],
   };
 
