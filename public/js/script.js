@@ -21,6 +21,7 @@ function sendData() {
     Realname: document.querySelector('#edit-country').value,
     Email: document.querySelector('#edit-username').value,
     Country: document.querySelector('#edit-password').value,
+    Favorites: [],
   };
 
   console.log(user);
