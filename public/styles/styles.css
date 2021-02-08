@@ -7,13 +7,13 @@ a {
 /* CSS för Förstasidan*/
 .teaser-section {
   height: 60vh;
-  background-color: rgb(54, 54, 150);
+  background-color: #ffffff;
   display: flex;
   align-items: center;
 }
 
 .teaser-section-reversed {
-  background-color: white;
+  background-color: #1a2238;
   display: flex;
   height: 60vh;
 }
@@ -40,8 +40,6 @@ a {
   gap: 40px;
 }
 
-<<<<<<< HEAD
-=======
 /* CSS för mapview */
 .mapview-container {
   display: flex;
@@ -85,7 +83,6 @@ a {
   width: 70%;
 }
 
->>>>>>> Andy
 /* CSS för formulär */
 .page-wrapper {
   min-height: 100vh;

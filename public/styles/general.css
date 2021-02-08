@@ -9,13 +9,6 @@ html {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   min-height: 100vh;
   width: 100%;
-<<<<<<< HEAD
-  background-color: rgb(182, 101, 101);
-}
-
-header {
-  background-color: lightblue;
-=======
   background-color: rgb(255, 255, 255);
 }
 
@@ -29,18 +22,14 @@ header {
     #1a2238 70%,
     #ffffff calc(70% + 2px)
   );
->>>>>>> Andy
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 40%;
   width: 100%;
-<<<<<<< HEAD
-  padding: 0px 10px;
-  height: 30vh;
-=======
   padding: 10px 20px;
-  height: 40vh;
+  height: 60vh;
 }
 
 header input {
@@ -57,7 +46,6 @@ header input {
 header p {
   font-size: 16px;
   color: #fff;
->>>>>>> Andy
 }
 
 .nav-container {
@@ -74,8 +62,6 @@ nav ul {
   gap: 30px;
   list-style: none;
 }
-<<<<<<< HEAD
-=======
 
 nav ul a {
   color: rgba(255, 255, 255, 0.6);
@@ -96,4 +82,3 @@ button {
   font-size: 16px;
   border: none;
 }
->>>>>>> Andy

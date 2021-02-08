@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 // getRecipeData();
 // getUser();
 
@@ -48,4 +46,3 @@ async function getUser(){
  console.log(userArray);
 }
 
->>>>>>> Andy
