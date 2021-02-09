@@ -9,7 +9,7 @@ let loggedInUser = {
 };
 
 //Metod kallas på för att köras när sidan laddas.
-setDefaultValues(loggedInUser);
+// setDefaultValues(loggedInUser);
 
 //Test metod för att skicka data till databas via backend
 function sendData() {
@@ -58,10 +58,35 @@ async function getSingleUser() {
 }
 
 //Metod för att sätta värden till formulär på edit profile sidan.
-function setDefaultValues(user) {
-  document.querySelector('#edit-name').value = user.Realname;
-  document.querySelector('#edit-email').value = user.Email;
-  document.querySelector('#edit-country').value = user.Country;
-  document.querySelector('#edit-username').value = user.Username;
-  document.querySelector('#edit-password').value = user.Password;
-}
+// function setDefaultValues(user) {
+//   document.querySelector('#edit-name').value = user.Realname;
+//   document.querySelector('#edit-email').value = user.Email;
+//   document.querySelector('#edit-country').value = user.Country;
+//   document.querySelector('#edit-username').value = user.Username;
+//   document.querySelector('#edit-password').value = user.Password;
+// }
+
+const loginForm = document.querySelector('.login-form');
+const loginButton = document.querySelector('#loginSubmit');
+
+loginButton.addEventListener('click', async (e) => {
+  e.preventDefault();
+
+  const username = loginForm.username.value;
+  const password = loginForm.password.value;
+
+  const response = await fetch(`/users`);
+
+  const users = await response.json();
+  users.forEach((user) => {
+    if (username === user.Username && password === user.Password) {
+      loggedInUser = user;
+    } else {
+      console.log('Wrong Username / Password combination');
+    }
+  });
+
+  console.log(loggedInUser);
+});
+
+// async function checkUserCredentials() {}

@@ -13,24 +13,32 @@
 
 
 <body>
-        <header>
-            <div class="nav-container">
-                <a href="/index.html">
-                    <h1 class="logo">Logo</h1>
-                </a>
-                <nav>
-                    <ul>
-                        <li><a href="addrecipe.html">Add recipe</a></li>
-                        <li><a href="mapview.html">Search</a></li>
-                        <li><a href="#">Wishlist</a></li>
-                    </ul>
-                </nav>
+    <header>
+        <div class="nav-container">
+            <a href="/index.html">
+                <h1 class="logo">Logo</h1>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="addrecipe.html">Add recipe</a></li>
+                    <li><a href="mapview.html">Search</a></li>
+                    <li><a href="#">Wishlist</a></li>
+                </ul>
+            </nav>
+            <div class="login-container">
+                <form class="login-form">
+                    <input id="loginUsername" name="username" type="text" placeholder="Username">
+                    <input id="loginPassword" name="password" type="text" placeholder="Password">
+                    <input id="loginSubmit" type="submit" value="login">
+                </form>
                 <a href="signup.html">
-                    <h1>Log in</h1>
+                    <p>Sign Up</p>
                 </a>
             </div>
-            <p>Text om hur fantastisk sidan är!</p>
-        </header>
+
+        </div>
+        <p>Text om hur fantastisk sidan är!</p>
+    </header>
     <main>
         <section class="teaser-section">
             <div class="teaser-text-container">
@@ -62,22 +70,7 @@
         </section>
     </main>
 
-
-
-    <!-- <h1 id="mainText">Food inspo fo y'all</h1>
-    <h2>Food is awesome</h2>
-    <button id="button" value="click me!" type="button"
-        style="height: 100px; width: 200px; background: yellow; color: blue;"></button>
-    <a href="/signup.html">Sign Up!</a>
-    <a href="/editprofile.html">Profile!</a>
-    <button id="sendData" onclick="sendData()">Send data</button>
-    <button id="getData" onclick="getData()">Get data</button>
-
-
-    <section id="displayuser">
-
-    </section> -->
-    <script src="/public/js/script.js"></script>
+    <script src="/js/script.js"></script>
 
 
 </body>

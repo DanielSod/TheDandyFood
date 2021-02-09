@@ -111,6 +111,12 @@ a {
   color: #fff;
 }
 
+.recipe-info-text {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
 .recipe-info-container .recipe-info-detailed {
   display: flex;
   gap: 10px;
@@ -130,6 +136,10 @@ a {
   min-height: 50vh;
   display: flex;
   gap: 10%;
+}
+
+.howto-container h1 {
+  color: #fff;
 }
 
 .recipe-ingredient-container {
