@@ -13,26 +13,26 @@ html {
 }
 
 
-main {
+.uppersection {
     display: flex;
     flex-direction: row;
 
+    justify-content: space-around;
 
     width: 800px;
     height: 400px;
 
     padding: 40px;
-    margin: 60px, 60px;
 
     background: white;
     border: 40px solid blue;
 }
 
-footer {
+.lowersection {
     display: flex;
     flex-direction: row;
 
-
+    justify-content: space-around;
 
     width: 800px;
     height: 400px;
@@ -45,14 +45,6 @@ footer {
 
 }
 
-section {
-    display: flex;
-    justify-content: center;
-
-    width: 400px;
-
-    border: 40px solid blue;
-}
 
 #leftside {
     display: flex;
@@ -94,7 +86,7 @@ section {
     padding: ;
     margin: ;
 
-    background: purple;
+    background: #a2acf8;
 }
 
 .rightgroup {
@@ -108,7 +100,7 @@ section {
     padding: ;
     margin: ;
 
-    background: lightgreen;
+    background: #aff8a2;
 }
 
 
@@ -123,7 +115,7 @@ section {
     padding: ;
     margin: ;
 
-    background: white;
+    background: #a97df7;
 }
 
 
@@ -152,7 +144,7 @@ section {
     padding: ;
     margin: ;
 
-    background: white;
+    background: #e7b37d;
 }
 
 label {
@@ -165,4 +157,29 @@ input {
     font-size: 18;
     font-weight: 600;
     padding: 5px;
+}
+
+thqty {
+    text-align: center;
+}
+
+thingredient {
+    text-align: left;
+}
+
+
+#tempvalue {
+    text-align: center;
+    background: #c95f92;
+    padding: 10px;
+}
+
+#submitter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #c95f92;
+    width: auto;
+    height: auto;
+    padding: 30px;
 }

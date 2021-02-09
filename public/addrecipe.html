@@ -10,60 +10,96 @@
 
 </head>
 
+    <!-- recipe.db -->
 
 <body>
 
     <main>
-        <section>
-            <div class="right">
+        <section class="uppersection">
+            <div class="leftgroup">
+                <label>Title</label>
+                <input type="text" value="" id="title" placeholder="Title">
+                <label>Country</label>
+                <input type="text" name="" id="country" placeholder="Country">
+                <label>Description</label>
+                <input type="text" name="" id="description" placeholder="Description">
+            </div>
 
-                <div class="leftgroup">
-                    <label>Title</label>
-                    <input type="text">
-                    <label>Country</label>
-                    <input type="text">
-                    <label>Description</label>
-                    <input type="text">
-                </div>
-        </section>
 
-        <section>
+
             <div class="leftside">
 
                 <div class="rightgroup">
                     <label>Portions</label>
-                    <input type="number">
+                    <input type="number" name="" id="portionSize" placeholder="PortionSize">
                     <label>Time</label>
-                    <input type="number">
-                    <label>Difficulty</label>
-                    <input type="range">
+                    <input type="number" name="" id="time" placeholder="Time">
+                    <label for="difficulty">Difficulty (between 1 and 5):</label>
+                    <input type="range" id="difficulty" name="difficulty" min="1" max="5">
+
+                    <img src="" alt="BILD PÅ MUMSBIT" style="text-align: center">
 
                 </div>
 
+                <!-- Temp value -->
+                <!-- Signatur [User] -->
+                <div id="tempvalue">
+
+                    <label>Templabel</label> <br>
+                    <input type="">
+                </div>
+
+
         </section>
 
-    </main>
 
-    <footer>
-        <section>
+
+        <section class="lowersection">
             <div class="leftgroup">
 
                 <div class="ingredients">
                     <table>
                         <thead>
                             <tr>
-                                <td>Qty</td>
-                                <td>Ingredient</td>
-
+                                <th class="thqty">Qty</th>
+                                <th class="thingredient">Ingredient</th>
                             </tr>
                         </thead>
+
+
+
                         <tbody>
-                            <tr>
-                                <td>5</td>
-                                <td>En säck bajs</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
+                            <form>
+                                <tr>
+                                    <td><input type="text" name="" id="" value="" placeholder="qty"></td>
+                                    <td><input type="text" name="" id="ingredients" value="" placeholder="Ingredients"></td>
+                                </tr>
+                                <tr>
+
+                                    <td><input type="text" name="" id="" value="" placeholder="qty"></td>
+                                    <td><input type="text" name="" id="ingredients" value="" placeholder="Ingredients"></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="text" name="" id="" value="" placeholder="qty"></td>
+                                    <td><input type="text" name="" id="ingredients" value="" placeholder="Ingredients"></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="text" name="" id="" value="" placeholder="qty"></td>
+                                    <td><input type="text" name="" id="ingredients" value="" placeholder="Ingredients"></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="text" name="" id="" value="" placeholder="qty"></td>
+                                    <td><input type="text" name="" id="ingredients" value="" placeholder="Ingredients"></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="text" name="" id="" value="" placeholder="qty"></td>
+                                    <td><input type="text" name="" id="ingredients" value="" placeholder="Ingredients"></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="text" name="" id="" value="" placeholder="qty"></td>
+                                    <td><input type="text" name="" id="ingredients" value="" placeholder="Ingredients"></td>
+                                </tr>
+                            </form>
                         </tbody>
                     </table>
 
@@ -71,30 +107,40 @@
                 </div>
 
             </div>
-        </section>
 
-        <section>
             <div class="rightgroup">
 
                 <div class="howto">
                     <label>How to</label>
                     <ul>
-                        <li>Såhär ska du börja göra</li>
-                        <li>Sen får du göra såhär</li>
-                        <li></li>
+                        <li><input type="text" name="" id="howto" placeholder="How to"> </li>
+                        <li><input type="text" name="" id="howto" placeholder="How to"> </li>
+                        <li><input type="text" name="" id="howto" placeholder="How to"> </li>
+                        <li><input type="text" name="" id="howto" placeholder="How to"> </li>
+                        <li><input type="text" name="" id="howto" placeholder="How to"> </li>
+                        <li><input type="text" name="" id="howto" placeholder="How to"> </li>
+                        <li><input type="text" name="" id="howto" placeholder="How to"> </li>
+
                     </ul>
                     <button>Add step</button>
                 </div>
 
             </div>
+
+
         </section>
-    </footer>
 
+        <div id="submitter" style="">
+            <input type="submit" value="Submit" onclick="uploadrecipe" style="width: 120px">
 
-    <script>
+            <h1>Upload recipe</h1>
+        </div>
 
-    </script>
+        <script>
+            let arringredient = [];
 
+        </script>
+    </main>
 </body>
 
 </html>
