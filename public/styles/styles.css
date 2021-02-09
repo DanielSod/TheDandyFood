@@ -83,6 +83,99 @@ a {
   width: 70%;
 }
 
+/* CSS för Recipe_Detail*/
+.recipe-detail-main {
+  background-color: #fff;
+  width: 100%;
+  min-height: 70vh;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  flex-direction: column;
+}
+
+.recipe-info-container {
+  padding: 25px;
+  width: 70%;
+  min-height: 50vh;
+  display: flex;
+  justify-content: space-between;
+  background-color: #1a2238;
+}
+
+.recipe-info-container h1 {
+  color: #fff;
+}
+
+.recipe-info-container p {
+  color: #fff;
+}
+
+.recipe-info-text {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.recipe-info-container .recipe-info-detailed {
+  display: flex;
+  gap: 10px;
+  height: 50px;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  background-color: #fff;
+}
+
+.recipe-info-detailed p {
+  color: #000;
+}
+
+.howto-container {
+  background-color: #1a2238;
+  width: 70%;
+  min-height: 50vh;
+  display: flex;
+  gap: 10%;
+}
+
+.howto-container h1 {
+  color: #fff;
+}
+
+.recipe-ingredient-container {
+  padding: 10px 15px;
+  width: 30%;
+}
+
+.recipe-ingredient-container ul {
+  list-style: none;
+  width: 100%;
+  height: 100%;
+}
+
+.recipe-ingredient-container ul li {
+  background-color: #fff;
+  height: 40px;
+  margin: 15px 0px;
+}
+
+.recipe-howto-container {
+  width: 70%;
+  padding: 10px 15px;
+}
+
+.recipe-howto-container ul {
+  list-style: none;
+  width: 100%;
+  height: 100%;
+}
+
+.recipe-howto-container ul li {
+  background-color: #fff;
+  height: 70px;
+  margin: 15px 0px;
+}
+
 /* CSS för formulär */
 .page-wrapper {
   min-height: 100vh;

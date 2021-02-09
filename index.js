@@ -53,3 +53,12 @@ app.get('/users/:id', (request, response) => {
     response.json(data);
   });
 });
+
+app.get('/users', (request, response) => {
+  database.find({}, function (err, data) {
+    if (err) {
+      console.log(err);
+    }
+    response.json(data);
+  });
+});

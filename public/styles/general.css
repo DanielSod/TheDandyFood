@@ -17,11 +17,7 @@ h1 {
 }
 
 header {
-  background-image: linear-gradient(
-    184deg,
-    #1a2238 70%,
-    #ffffff calc(70% + 2px)
-  );
+  background-image: linear-gradient(184deg, #1a2238 70%, #ffffff calc(70% + 2px));
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -72,6 +68,27 @@ nav ul a {
 
 nav ul a:hover {
   color: rgba(255, 255, 255, 1);
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 500px;
+  gap: 5px;
+}
+
+.login-credentials-container input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid white;
+  border-radius: 0;
 }
 
 button {
