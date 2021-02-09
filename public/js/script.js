@@ -78,6 +78,7 @@ loginButton.addEventListener('click', async (e) => {
   const response = await fetch(`/users`);
 
   const users = await response.json();
+
   users.forEach((user) => {
     if (username === user.Username && password === user.Password) {
       loggedInUser = user;
@@ -88,5 +89,3 @@ loginButton.addEventListener('click', async (e) => {
 
   console.log(loggedInUser);
 });
-
-// async function checkUserCredentials() {}
