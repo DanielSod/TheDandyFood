@@ -9,24 +9,24 @@ app.listen(5500, () => console.log('listening at 5500'));
 app.use(express.static('public'));
 app.use(express.json({ limit: '1mb' }));
 
-const database = new Datastore('dandyfood.db');
-const recipeDB = new Datastore('recipe.db');
+const usersDB = new Datastore('users.db');
+const recipesDB = new Datastore('recipes.db');
 
-recipeDB.loadDatabase();
+recipesDB.loadDatabase();
 console.log('Recipe is running');
-database.loadDatabase();
+usersDB.loadDatabase();
 console.log('Dandyfood is running');
 
 app.post('/recipe', (request, response) => {
   const data = request.body;
-  recipeDB.insert(data);
+  recipesDB.insert(data);
   response.json({
     status: 'success',
   });
 });
 
 app.get('/recipe', (request, response) => {
-  recipeDB.find({}, function (err, data) {
+  recipesDB.find({}, function (err, data) {
     if (err) {
       console.log(err);
     }
@@ -47,7 +47,7 @@ app.get('/recipe', (request, response) => {
 
 app.post('/users', (request, response) => {
   const data = request.body;
-  database.insert(data);
+  usersDB.insert(data);
 
   response.json({
     status: 'success',
@@ -57,7 +57,7 @@ app.post('/users', (request, response) => {
 });
 
 app.get('/users', (request, response) => {
-  database.find({}, function (err, data) {
+  usersDB.find({}, function (err, data) {
     if (err) {
       console.log(err);
     }
@@ -67,7 +67,7 @@ app.get('/users', (request, response) => {
 
 app.get('/users/:id', (request, response) => {
   let userName = request.params.id;
-  database.find({ Username: userName }, function (err, data) {
+  usersDB.find({ Username: userName }, function (err, data) {
     if (err) {
       console.log(err);
     }
