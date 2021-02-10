@@ -24,7 +24,7 @@ async function createUser() {
         },
         body: JSON.stringify(user),
       };
-      fetch('/api', options);
+      fetch('/users', options);
       console.log('User Created');
     }
   }
