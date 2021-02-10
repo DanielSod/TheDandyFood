@@ -10,7 +10,11 @@ app.use(express.json({ limit: '1mb' }));
 
 const database = new Datastore('dandyfood.db');
 database.loadDatabase();
-console.log('Server is running');
+console.log('Dandyfood is running');
+
+const recipedatabase = new Datastore('recipedatabase.db');
+recipedatabase.loadDatabase();
+console.log('Recipe is running');
 
 app.post('/api', (request, response) => {
   const data = request.body;
