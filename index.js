@@ -36,8 +36,7 @@ app.get('/recipes', (request, response) => {
 
 app.get('/recipes/:id', (request, response) => {
   let title = request.params.id;
-  console.log(title);
-  recipesDB.find({ Title: title }, function (err, data) {
+  recipesDB.find({ Title: new RegExp(title) }, function (err, data) {
     if (err) {
       console.log(err);
     }
