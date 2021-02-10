@@ -16,6 +16,9 @@ const recipedatabase = new Datastore('recipedatabase.db');
 recipedatabase.loadDatabase();
 console.log('Recipe is running');
 
+
+
+
 app.post('/api', (request, response) => {
   const data = request.body;
   database.insert(data);
@@ -26,6 +29,18 @@ app.post('/api', (request, response) => {
     longitude: data.lon,
   });
 });
+
+
+app.post('/recipe', (request, response) => {
+  const data = request.body;
+  recipedatabase.insert(data);
+console.log(data);
+  response.json({
+    status: 'success'
+  });
+});
+
+
 
 app.get('/api', (request, response) => {
   database.find({}, function (err, data) {

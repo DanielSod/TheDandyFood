@@ -19,8 +19,6 @@ let recipeTemp = {
 
 function fillfromWeb() {
     console.log('Data sent');
-
-    
     const recipe = {
         Description: document.querySelector('#description').value,
         Difficulty: document.querySelector('#difficulty').value,	
@@ -39,7 +37,7 @@ function fillfromWeb() {
 
     console.log(recipe);
 
-    recipeTemp = recipe;
+    
 
     const options = {
     method: 'POST',
@@ -48,12 +46,15 @@ function fillfromWeb() {
     },
         body: JSON.stringify(recipe),
     };
-    fetch('/api', options);
+    fetch('/recipe', options);
 }
 
 
+
+
+
 async function getfromDB() {
-const response = await fetch(`/api/${recipeTemp.Title}`);
+const response = await fetch(`/recipe/${recipeTemp.Title}`);
 const data = await response.json();
 
 console.log(data);
