@@ -12,7 +12,6 @@ html {
     background-color: rgb(255, 255, 255);
 }
 
-
 .uppersection {
     display: flex;
     flex-direction: row;
@@ -31,32 +30,20 @@ html {
 .lowersection {
     display: flex;
     flex-direction: row;
-
     justify-content: space-around;
-
     width: 800px;
     height: 400px;
-
     padding: 40px;
-    margin: ;
-
     background: white;
     border: 40px solid blue;
 
 }
 
-
 #leftside {
     display: flex;
     flex-direction: column;
     align-content: center;
-
     width: 50%;
-    height: ;
-
-    padding: ;
-    margin: ;
-
     background: white;
 }
 
@@ -64,14 +51,7 @@ html {
     display: flex;
     flex-direction: column;
     align-content: center;
-
     width: 50%;
-    height: ;
-
-    padding: ;
-    margin: ;
-
-
     background: white;
 }
 
@@ -79,13 +59,6 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
-    width: ;
-    height: ;
-
-    padding: ;
-    margin: ;
-
     background: #a2acf8;
 }
 
@@ -93,43 +66,20 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
-    width: ;
-    height: ;
-
-    padding: ;
-    margin: ;
-
     background: #aff8a2;
 }
-
 
 .ingredients {
     display: flex;
     flex-direction: column;
     align-content: center;
-
-    width: ;
-    height: ;
-
-    padding: ;
-    margin: ;
-
     background: #a97df7;
 }
-
 
 .smallfacts {
     display: flex;
     flex-direction: column;
     align-content: center;
-
-    width: ;
-    height: ;
-
-    padding: ;
-    margin: ;
-
     background: white;
 }
 
@@ -137,13 +87,6 @@ html {
     display: flex;
     flex-direction: column;
     align-content: center;
-
-    width: ;
-    height: ;
-
-    padding: ;
-    margin: ;
-
     background: #e7b37d;
 }
 
@@ -157,6 +100,7 @@ input {
     font-size: 18;
     font-weight: 600;
     padding: 5px;
+    
 }
 
 thqty {
@@ -167,7 +111,6 @@ thingredient {
     text-align: left;
 }
 
-
 #tempvalue {
     text-align: center;
     background: #c95f92;
@@ -176,10 +119,11 @@ thingredient {
 
 #submitter {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: space-evenly;
     background: #c95f92;
-    width: auto;
+    width: 800px;
     height: auto;
     padding: 30px;
 }

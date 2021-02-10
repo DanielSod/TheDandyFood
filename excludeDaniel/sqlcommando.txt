@@ -1,0 +1,80 @@
+
+
+CREATE TABLE "recipe" (
+	"recid"	INTEGER UNIQUE,
+	"title"	TEXT NOT NULL,
+	"country"	TEXT NOT NULL,
+	"description"	TEXT NOT NULL,
+	"portionSize"	INTEGER NOT NULL,
+	"cooktime"	INTEGER NOT NULL,
+	"difficulty"	INTEGER NOT NULL,
+	"rating"	INTEGER,
+	"qty"	INTEGER NOT NULL,
+	"unit"	TEXT NOT NULL,
+	"ingredients"	TEXT NOT NULL,
+	"howto"	TEXT NOT NULL,
+	"recpic"	TEXT,
+	"signature"	TEXT,
+	PRIMARY KEY("recid" AUTOINCREMENT)
+)
+
+	recid
+	title
+	country
+	description
+	portionSize
+	cooktime
+	difficulty
+	rating
+	qty
+	unit
+	ingredients
+	howto
+	recpic
+	signature
+	
+	
+
+INSERT INTO recipe (recid, title, country, description, portionSize, cooktime, difficulty, rating , qty, unit, ingredients, howto, recpic, signature)
+VALUES (1, "pasta deluxe", "italien","smaskig pasta med ketchup", 1 , 10 , 1, NULL, 1.5, "dl", "makaroner", "lägg makaronerna i kokande vatten", "https://github.com/DanielSod/TheDandyFood/blob/dan/excludeDaniel/pasta-a.jpg", "Daniel");
+
+
+
+    Description: document.querySelector('#description').value,
+	Difficulty: document.querySelector('#difficulty').value,	
+	Howto: document.querySelector('#howto').value,
+    Ingredients: document.querySelector('#ingredients').value,
+    PortionSize: document.querySelector('#portionSize').value,
+    Qty: document.querySelector('#qty').value,
+	Rating: document.querySelector('#rating').value,
+	Recpic: document.querySelector('#recpic').value,
+    Signature: document.querySelector('#signature').value,
+    Time: document.querySelector('#time').value,
+    Title: document.querySelector('#title').value,
+    Unit: document.querySelector('#unit').value,
+    _id: 'lFYPp9qsvd3b1iff',
+    
+    
+        Title: '1kg mjöl',
+	Description: 'Bästa protein per krona',
+	PortionSize: 1,
+	Time: 12,
+	Difficulty: 1,
+	Rating: 1,
+	Qty: 1,
+	Unit: 'kg',
+	Ingredients: 'mjöl',
+	Howto: 
+	Recpic: 'a link',
+    Signature: 'Daniel',
+    
+    
+    
+    
+{"Title":"1kg mjöl","Description":"Bästa protein per krona",
+"PortionSize":"1","Time":"12",
+"Difficulty":"1","Rating":"1",
+"Qty":"1","Unit":"kg",
+"Ingredients":"mjöl","Howto":"Snorta!",
+"Signature":"Daniel","Recpic":"https://github.com/DanielSod/TheDandyFood/blob/dan/excludeDaniel/pasta-a.jpg",
+"_id":"2vhITzTPoz1c0Bqh"}

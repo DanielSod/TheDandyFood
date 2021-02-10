@@ -4,16 +4,12 @@
 <head>
     <meta charset="utf-8" />
     <title>Dandy Food</title>
-
-
     <link rel="stylesheet" href="styles/danstyle.css">
-
 </head>
 
     <!-- recipe.db -->
 
 <body>
-
     <main>
         <section class="uppersection">
             <div class="leftgroup">
@@ -25,33 +21,30 @@
                 <input type="text" name="" id="description" placeholder="Description">
             </div>
 
-
-
             <div class="leftside">
 
                 <div class="rightgroup">
                     <label>Portions</label>
-                    <input type="number" name="" id="portionSize" placeholder="PortionSize">
+                    <input type="number" name="" id="portionSize" placeholder="PortionSize" value="">
                     <label>Time</label>
                     <input type="number" name="" id="time" placeholder="Time">
                     <label for="difficulty">Difficulty (between 1 and 5):</label>
                     <input type="range" id="difficulty" name="difficulty" min="1" max="5">
+                    <label>Rating</label>
+                    <input type="number" name="" id="rating" placeholder="Rating" value="1">
 
-                    <img src="" alt="BILD PÅ MUMSBIT" style="text-align: center">
+                    <img src="" alt="BILD PÅ MUMSBIT" id="recpic" style="text-align: center" value="">
 
                 </div>
 
                 <!-- Temp value -->
                 <!-- Signatur [User] -->
                 <div id="tempvalue">
-
                     <label>Templabel</label> <br>
-                    <input type="">
+                    <input type="text" name="" id="signature" value="">
+                    <button name="Load" value='Load from db' id="loadtemplabel" onclick="getfromDB()" style="height: 50px; width: 70px;"></button>
                 </div>
-
-
         </section>
-
 
 
         <section class="lowersection">
@@ -62,6 +55,7 @@
                         <thead>
                             <tr>
                                 <th class="thqty">Qty</th>
+                                <th class="thunit">Qty</th>
                                 <th class="thingredient">Ingredient</th>
                             </tr>
                         </thead>
@@ -71,45 +65,58 @@
                         <tbody>
                             <form>
                                 <tr>
-                                    <td><input type="text" name="" id="" value="" placeholder="qty"></td>
-                                    <td><input type="text" name="" id="ingredients" value="" placeholder="Ingredients"></td>
+                                    <td><input type="text" id="qty" value="" 
+                                        placeholder="qty"><td>
+                                    <td><input type="text" name="" id="unit" value="" 
+                                    placeholder="unit"><td>
+                                    <td><input type="text" name="" id="ingredients" value=""
+                                    placeholder="Ingredients"></td>
                                 </tr>
                                 <tr>
-
-                                    <td><input type="text" name="" id="" value="" placeholder="qty"></td>
-                                    <td><input type="text" name="" id="ingredients" value="" placeholder="Ingredients"></td>
+                                    <td><input type="text" name="" id="qty" value="" 
+                                    placeholder="qty"><td>
+                                    <td><input type="text" name="" id="ingredients" value=""
+                                    placeholder="Ingredients"></td>
                                 </tr>
                                 <tr>
-                                    <td><input type="text" name="" id="" value="" placeholder="qty"></td>
-                                    <td><input type="text" name="" id="ingredients" value="" placeholder="Ingredients"></td>
+                                    <td><input type="text" name="" id="qty" value="" 
+                                    placeholder="qty"><td>
+                                    <td><input type="text" name="" id="ingredients" value=""
+                                    placeholder="Ingredients"></td>
                                 </tr>
                                 <tr>
-                                    <td><input type="text" name="" id="" value="" placeholder="qty"></td>
-                                    <td><input type="text" name="" id="ingredients" value="" placeholder="Ingredients"></td>
+                                    <td><input type="text" name="" id="qty" value="" 
+                                    placeholder="qty"><td>
+                                    <td><input type="text" name="" id="ingredients" value=""
+                                    placeholder="Ingredients"></td>
                                 </tr>
                                 <tr>
-                                    <td><input type="text" name="" id="" value="" placeholder="qty"></td>
-                                    <td><input type="text" name="" id="ingredients" value="" placeholder="Ingredients"></td>
+                                    <td><input type="text" name="" id="qty" value="" 
+                                    placeholder="qty"><td>
+                                    <td><input type="text" name="" id="ingredients" value=""
+                                    placeholder="Ingredients"></td>
                                 </tr>
                                 <tr>
-                                    <td><input type="text" name="" id="" value="" placeholder="qty"></td>
-                                    <td><input type="text" name="" id="ingredients" value="" placeholder="Ingredients"></td>
+                                    <td><input type="text" name="" id="qty" value="" 
+                                    placeholder="qty"><td>
+                                    <td><input type="text" name="" id="ingredients" value=""
+                                    placeholder="Ingredients"></td>
                                 </tr>
                                 <tr>
-                                    <td><input type="text" name="" id="" value="" placeholder="qty"></td>
-                                    <td><input type="text" name="" id="ingredients" value="" placeholder="Ingredients"></td>
+                                    <td><input type="text" name="" id="qty" value="" 
+                                    placeholder="qty"><td>
+                                    <td><input type="text" name="" id="ingredients" value=""
+                                    placeholder="Ingredients"></td>
                                 </tr>
                             </form>
                         </tbody>
                     </table>
-
                     <button>Add step</button>
                 </div>
-
             </div>
 
-            <div class="rightgroup">
 
+            <div class="rightgroup">
                 <div class="howto">
                     <label>How to</label>
                     <ul>
@@ -120,24 +127,22 @@
                         <li><input type="text" name="" id="howto" placeholder="How to"> </li>
                         <li><input type="text" name="" id="howto" placeholder="How to"> </li>
                         <li><input type="text" name="" id="howto" placeholder="How to"> </li>
-
+                        <li><input type="text" name="" id="howto" placeholder="How to"> </li>
                     </ul>
                     <button>Add step</button>
                 </div>
-
             </div>
-
-
         </section>
 
-        <div id="submitter" style="">
-            <input type="submit" value="Submit" onclick="uploadrecipe" style="width: 120px">
-
+        <div id="submitter">
+            <input type="submit" value="Submit" onclick="uploadrecipe" style="width: 120px; height: 50px">
             <h1>Upload recipe</h1>
+
+            <button value="Create db and fill form" style="width: 120px; height: 50px;"
+                onclick="fillfromWeb()">Add to DB</button>
         </div>
 
-        <script>
-            let arringredient = [];
+        <script src="js/addrecipe.js"; src="../index.js">
 
         </script>
     </main>
