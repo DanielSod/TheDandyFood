@@ -17,7 +17,7 @@ console.log('Recipe is running');
 usersDB.loadDatabase();
 console.log('Dandyfood is running');
 
-app.post('/recipe', (request, response) => {
+app.post('/recipes', (request, response) => {
   const data = request.body;
   recipesDB.insert(data);
   response.json({
@@ -25,12 +25,24 @@ app.post('/recipe', (request, response) => {
   });
 });
 
-app.get('/recipe', (request, response) => {
+app.get('/recipes', (request, response) => {
   recipesDB.find({}, function (err, data) {
     if (err) {
       console.log(err);
     }
     console.log(output);
+  });
+});
+
+app.get('/recipes/:id', (request, response) => {
+  let title = request.params.id;
+  console.log(title);
+  recipesDB.find({ Title: title }, function (err, data) {
+    if (err) {
+      console.log(err);
+    }
+    console.log(data);
+    response.json(data);
   });
 });
 

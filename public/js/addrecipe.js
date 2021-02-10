@@ -41,7 +41,7 @@ function fillfromWeb() {
     },
     body: JSON.stringify(recipe),
   };
-  fetch('/recipe', options);
+  fetch('/recipes', options);
 }
 
 async function getfromDB() {
