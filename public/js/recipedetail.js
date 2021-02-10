@@ -5,4 +5,5 @@ function setRecipeData() {
   console.log(recipe);
 
   document.querySelector('#recipeTitle').textContent = recipe.Title;
+  document.querySelector('#recipeDescription').textContent = recipe.Description;
 }
