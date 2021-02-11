@@ -1,5 +1,7 @@
 //let server = require('../Server/Server.js')
 
+
+
 let recipeTemp = {
   Description: 'Kan detta funka',
   Difficulty: '1',
@@ -15,9 +17,12 @@ let recipeTemp = {
   Unit: 'kg',
 };
 
-function fillfromWeb() {
+async function fillfromWeb() {
   console.log('Data sent');
-  document.querySelector(loggedInUser.Username) = daniel;
+  
+  
+  let user = localStorage.getItem('loggedInUser');
+
   
   let recipe = {
     Description: document.querySelector('#description').value,
@@ -28,7 +33,7 @@ function fillfromWeb() {
     Qty: document.querySelector('#qty').value,
     Rating: document.querySelector('#rating').value,
     Recpic: document.querySelector('#recpic').value,
-    Signature: document.querySelector(loggedInUser.Username),
+    Signature: user.Username,
     Time: document.querySelector('#time').value,
     Title: document.querySelector('#title').value,
     Unit: document.querySelector('#unit').value,
@@ -55,7 +60,7 @@ async function getfromDB() {
 
 
 async function assignsignature() {
- = loggedInUser.Username;
+sign = loggedInUser.Username;
 }
 
 // async function loadstuff(){

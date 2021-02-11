@@ -54,11 +54,11 @@
 
                         <tbody>
                             <tr>
-                                <td><input type="text" value="" placeholder="qty" class="colqty">
+                                <td><input id="qty" type="text" value="" placeholder="qty" class="colqty">
                                 </td>
-                                <td><input type="text" value="" placeholder="unit" class="colunit">
+                                <td><input id="unit" type="text" value="" placeholder="unit" class="colunit">
                                 </td>
-                                <td><input type="text" value="" placeholder="Ingredients" class="colingred"></td>
+                                <td><input id="ingredients" type="text" value="hej" placeholder="Ingredients" class="colingred"></td>
                             </tr>
                         </tbody>
                     </table>
@@ -86,15 +86,17 @@
         <section class="finaltouch" style="margin: 20px">
 
             <p id="">
-                <img src="" alt="BILD PÅ MUMSBIT" id="" value="">
+                <img src="" alt="BILD PÅ MUMSBIT" id="recpic" value="">
                 <button style="width: 60px; align-self: center">Choose picture</button>
                 <button style="width: 60px; align-self: center">Upload picture</button>
             </p>
 
             <p>
-                <input type="text" id="sign" value="" placeholder="Signature">
-                <p contenteditable="true" id="${sign}"> Signature</p>
+                <input type="text" id="Username" value="Signature" placeholder="Signature">
+                
                 <button onclick="assignsignature">Set signature</button>
+
+            
             </p>
 
 
@@ -106,6 +108,7 @@
 
         <button value="Create db and fill form" style="width: 120px; height: 50px;" onclick="fillfromWeb()">Add to DB</button>
         <button value="" id="loadtemplabel" onclick="getfromDB()" style="height: 80px; width: 100px;">getfromDB<br>add signature</button>
+        <label id="Username" placeholder="sign"></label>
 
         <script src="js/addrecipe.js">
 
