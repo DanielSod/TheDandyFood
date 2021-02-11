@@ -8,37 +8,6 @@ let loggedInUser = {
   _id: 'lFYPp9qsvd3b1ido',
 };
 
-//Metod kallas på för att köras när sidan laddas.
-// setDefaultValues(loggedInUser);
-
-//Test metod för att skicka data till databas via backend
-function sendData() {
-  console.log('Data sent');
-
-  const user = {
-    Username: document.querySelector('#edit-username').value,
-    Password: document.querySelector('#edit-password').value,
-    Realname: document.querySelector('#edit-name').value,
-    Email: document.querySelector('#edit-email').value,
-    Country: document.querySelector('#edit-country').value,
-    Favorites: [],
-  };
-
-  console.log(user);
-
-  loggedInUser = user;
-
-  const options = {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(user),
-  };
-
-  fetch('/api', options);
-}
-
 //Testmetod för att hämta all data från databasen via backend
 async function getData() {
   console.log('Trying to get data');

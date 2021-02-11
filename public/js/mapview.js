@@ -1,48 +1,28 @@
-// getRecipeData();
-// getUser();
-
-
-
-// async function getRecipeData() {
-//   console.log('Trying to get data');
-
-//   const response = await fetch('/api');
-//   userArray = await response.json();
-//   console.log(userArray);
-
-//   let container = document.querySelector('.recipe-card-container');
-
-//   for (let i = 0; i < userArray.length; i++) {
-//     container.innerHTML +=
-//       '<div class="recipe-card"><div>Bild</div><div class="description-container"><h1>' +
-//       userArray[i].Realname +
-//       '</h1><p>' +
-//       userArray[i].Username +
-//       '</p></div></div>';
-//   }
-// }
-
-async function getUser(){
+async function getRecipes() {
   let container = document.querySelector('.recipe-card-container');
   let userArray = [];
-  container.innerHTML = "";
-  let searchTerm = document.querySelector("#recipe-search").value;
+  container.innerHTML = '';
+  let searchTerm = document.querySelector('#recipe-search').value;
 
- const response = await fetch(`/users/${searchTerm}`);
+  const response = await fetch(`/recipes/${searchTerm}`);
 
- const data = await response.json();
+  const data = await response.json();
 
- userArray = data;
- 
- for (let i = 0; i < userArray.length; i++) {
-  container.innerHTML +=
-    '<div class="recipe-card"><div>Bild</div><div class="description-container"><h1>' +
-    userArray[i].Realname +
-    '</h1><p>' +
-    userArray[i].Username +
-    '</p></div></div>';
+  recipeList = data;
+
+  for (let i = 0; i < recipeList.length; i++) {
+    clickedRecipe = recipeList[i];
+    container.innerHTML +=
+      '<a href="recipeDetail.html"><div class="recipe-card" onclick="setRecipe(clickedRecipe)"><div>Bild</div><div class="description-container"><h1>' +
+      recipeList[i].Title +
+      '</h1><p>' +
+      recipeList[i].Description +
+      '</p></div></div></a>';
+  }
+
+  console.log(userArray);
 }
 
- console.log(userArray);
+function setRecipe(clickedRecipe) {
+  localStorage.setItem('clickedRecipe', JSON.stringify(clickedRecipe));
 }
-
