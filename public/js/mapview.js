@@ -13,7 +13,7 @@ async function getRecipes() {
   for (let i = 0; i < recipeList.length; i++) {
     clickedRecipe = recipeList[i];
     container.innerHTML +=
-      '<a href="recipeDetail.html"><div class="recipe-card" onclick="setRecipe(clickedRecipe)"><div>Bild</div><div class="description-container"><h1>' +
+      '<a><div class="recipe-card" onclick="setRecipe(clickedRecipe)"><div>Bild</div><div class="description-container"><h1>' +
       recipeList[i].Title +
       '</h1><p>' +
       recipeList[i].Description +
@@ -24,5 +24,9 @@ async function getRecipes() {
 }
 
 function setRecipe(clickedRecipe) {
-  localStorage.setItem('clickedRecipe', JSON.stringify(clickedRecipe));
+  let url = new URL('http://localhost:5500/recipeDetail.html');
+  url.searchParams.append("id", clickedRecipe._id);
+  console.log("Efter", url);
+
+  document.location.href = url;
 }

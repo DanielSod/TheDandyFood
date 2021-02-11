@@ -13,11 +13,9 @@ loginButton.addEventListener('click', async (e) => {
 
   users.forEach((user) => {
     if (username === user.Username && password === user.Password) {
-      loggedInUser = user;
+      localStorage.setItem('loggedInUser', JSON.stringify(user));
     } else {
       console.log('Wrong Username / Password combination');
     }
   });
-
-  console.log(loggedInUser);
 });
