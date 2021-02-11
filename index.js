@@ -34,9 +34,20 @@ app.get('/recipes', (request, response) => {
   });
 });
 
-app.get('/recipes/:id', (request, response) => {
+app.get('/recipes/:title', (request, response) => {
   let title = request.params.id;
   recipesDB.find({ Title: new RegExp(title) }, function (err, data) {
+    if (err) {
+      console.log(err);
+    }
+    console.log(data);
+    response.json(data);
+  });
+});
+
+app.get('/recipes/:id', (request, response) => {
+  let id = request.params.id;
+  recipesDB.findOne({ _id: id }, function (err, data) {
     if (err) {
       console.log(err);
     }
