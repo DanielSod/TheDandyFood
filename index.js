@@ -13,9 +13,9 @@ const usersDB = new Datastore('users.db');
 const recipesDB = new Datastore('recipes.db');
 
 recipesDB.loadDatabase();
-console.log('Recipe is running');
+console.log('RecipeDB is running');
 usersDB.loadDatabase();
-console.log('Dandyfood is running');
+console.log('UserDB is running');
 
 app.post('/recipes', (request, response) => {
   const data = request.body;
@@ -45,16 +45,7 @@ app.get('/recipes/:id', (request, response) => {
   });
 });
 
-// app.get('/api/:id', (request, response) => {
-//   let id = request.params.id;
 
-//   database.findOne({ Username: id }, function (err, data) {
-//     if (err) {
-//       console.log(err);
-//     }
-//     response.json(data);
-//   });
-// });
 
 app.post('/users', (request, response) => {
   const data = request.body;
@@ -86,3 +77,17 @@ app.get('/users/:id', (request, response) => {
     response.json(data);
   });
 });
+
+
+
+
+// app.get('/api/:id', (request, response) => {
+//   let id = request.params.id;
+
+//   database.findOne({ Username: id }, function (err, data) {
+//     if (err) {
+//       console.log(err);
+//     }
+//     response.json(data);
+//   });
+// });

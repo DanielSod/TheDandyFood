@@ -9,7 +9,7 @@ let recipeTemp = {
   Qty: '1',
   Rating: '1',
   Recpic: 'en bild',
-  Signature: 'Andreas',
+  Signature: 'signatur',
   Time: '12',
   Title: '1kg mjöl',
   Unit: 'kg',
@@ -17,6 +17,8 @@ let recipeTemp = {
 
 function fillfromWeb() {
   console.log('Data sent');
+  document.querySelector(loggedInUser.Username) = daniel;
+  
   let recipe = {
     Description: document.querySelector('#description').value,
     Difficulty: document.querySelector('#difficulty').value,
@@ -26,7 +28,7 @@ function fillfromWeb() {
     Qty: document.querySelector('#qty').value,
     Rating: document.querySelector('#rating').value,
     Recpic: document.querySelector('#recpic').value,
-    Signature: document.querySelector('#signature').value,
+    Signature: document.querySelector(loggedInUser.Username),
     Time: document.querySelector('#time').value,
     Title: document.querySelector('#title').value,
     Unit: document.querySelector('#unit').value,
@@ -49,6 +51,11 @@ async function getfromDB() {
   const data = await response.json();
 
   console.log(data);
+}
+
+
+async function assignsignature() {
+ = loggedInUser.Username;
 }
 
 // async function loadstuff(){
