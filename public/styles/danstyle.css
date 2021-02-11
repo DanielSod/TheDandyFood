@@ -12,82 +12,82 @@ html {
     background-color: rgb(255, 255, 255);
 }
 
+main {
+    padding: 50px;
+}
+
 .uppersection {
     display: flex;
-    flex-direction: row;
-
     justify-content: space-around;
-
-    width: 800px;
-    height: 400px;
-
-    padding: 40px;
-
-    background: white;
-    border: 40px solid blue;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .lowersection {
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
-    width: 800px;
+    margin-bottom: 50px;
     height: 400px;
-    padding: 40px;
-    background: white;
-    border: 40px solid blue;
-
-}
-
-#leftside {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    width: 50%;
-    background: white;
-}
-
-#rightside {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    width: 50%;
-    background: white;
 }
 
 .leftgroup {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    background: #a2acf8;
+    width: 300px;
+    padding: 30px;
+    align-items: center;
 }
 
 .rightgroup {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    background: #aff8a2;
+    width: 300px;
+    padding: 30px;
+    align-items: center;
 }
 
 .ingredients {
     display: flex;
     flex-direction: column;
-    align-content: center;
-    background: #a97df7;
 }
 
-.smallfacts {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    background: white;
+
+
+.colqty {
+    max-width: 60px;
+    font-size: 18;
+    font-weight: 600;
+    padding: 5px;
 }
 
-.howto {
+.colunit {
+    max-width: 60px;
+    font-size: 18;
+    font-weight: 600;
+    padding: 5px;
+}
+
+.colingred {
+    max-width: 160px;
+    font-size: 18;
+    font-weight: 600;
+    padding: 5px;
+}
+
+.finaltouch {
     display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    background: #c95f92;
+    height: auto;
+    padding: 30px;
+}
+
+#howto {
+    display: flex;
+    flex-flow: column;
     flex-direction: column;
-    align-content: center;
-    background: #e7b37d;
 }
 
 label {
@@ -97,33 +97,5 @@ label {
 }
 
 input {
-    font-size: 18;
-    font-weight: 600;
     padding: 5px;
-    
-}
-
-thqty {
-    text-align: center;
-}
-
-thingredient {
-    text-align: left;
-}
-
-#tempvalue {
-    text-align: center;
-    background: #c95f92;
-    padding: 10px;
-}
-
-#submitter {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    background: #c95f92;
-    width: 800px;
-    height: auto;
-    padding: 30px;
 }

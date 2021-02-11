@@ -21,7 +21,7 @@
                 <input type="text" name="" id="description" placeholder="Description">
             </div>
 
-            <div class="leftside">
+            <div>
                 <div class="rightgroup">
                     <label>Portions</label>
                     <input type="number" name="" id="portionSize" placeholder="PortionSize" value="">
@@ -32,125 +32,79 @@
                     <label>Rating</label>
                     <input type="number" name="" id="rating" placeholder="Rating" value="1">
 
-                    <img src="" alt="BILD PÅ MUMSBIT" id="recpic" style="text-align: center" value="">
                 </div>
 
                 <!-- Temp value -->
                 <!-- Signatur [User] -->
-                <div id="tempvalue">
-                    <label>Templabel</label> <br>
-                    <input type="text" name="" id="signature" value="">
-                    <button name="Load" value='Load from db' id="loadtemplabel" onclick="getfromDB()"
-                        style="height: 50px; width: 70px;"></button>
-                </div>
         </section>
 
 
         <section class="lowersection">
             <div class="leftgroup">
                 <div class="ingredients">
+
                     <table>
                         <thead>
                             <tr>
-                                <th class="thqty">Qty</th>
-                                <th class="thunit">Qty</th>
-                                <th class="thingredient">Ingredient</th>
+                                <th id="colqty"> Qty</th>
+                                <th id="colunit"> Unit</th>
+                                <th id="colingred"> Ingredient</th>
                             </tr>
                         </thead>
 
-
-
                         <tbody>
-                            <form>
-                                <tr>
-                                    <td><input type="text" id="qty" value="" 
-                                        placeholder="qty"><td>
-                                    <td><input type="text" name="" id="unit" value="" 
-                                        placeholder="unit"><td>
-                                    <td><input type="text" name="" id="ingredients" value=""
-                                        placeholder="Ingredients"></td>
-                                </tr>
-                                <!-- <tr>
-                                    <td><input type="text" name="" id="qty" value="" 
-                                        placeholder="qty"><td>
-                                    <td><input type="text" name="" id="unit" value="" 
-                                        placeholder="unit"><td>
-                                    <td><input type="text" name="" id="ingredients" value=""
-                                        placeholder="Ingredients"></td>
-                                </tr>
-                                <tr>
-                                    <td><input type="text" name="" id="qty" value="" 
-                                    placeholder="qty"><td>
-                                        <td><input type="text" name="" id="unit" value="" 
-                                        placeholder="unit"><td>
-                                    <td><input type="text" name="" id="ingredients" value=""
-                                    placeholder="Ingredients"></td>
-                                </tr>
-                                <tr>
-                                    <td><input type="text" name="" id="qty" value="" 
-                                    placeholder="qty"><td>
-                                        <td><input type="text" name="" id="unit" value="" 
-                                        placeholder="unit"><td>
-                                    <td><input type="text" name="" id="ingredients" value=""
-                                    placeholder="Ingredients"></td>
-                                </tr>
-                                <tr>
-                                    <td><input type="text" name="" id="qty" value="" 
-                                    placeholder="qty"><td>
-                                        <td><input type="text" name="" id="unit" value="" 
-                                        placeholder="unit"><td>
-                                    <td><input type="text" name="" id="ingredients" value=""
-                                    placeholder="Ingredients"></td>
-                                </tr>
-                                <tr>
-                                    <td><input type="text" name="" id="qty" value="" 
-                                        placeholder="qty"><td>
-                                    <td><input type="text" name="" id="unit" value="" 
-                                        placeholder="unit"><td>
-                                    <td><input type="text" name="" id="ingredients" value=""
-                                        placeholder="Ingredients"></td>
-                                </tr>
-                                <tr>
-                                    <td><input type="text" name="" id="qty" value="" 
-                                        placeholder="qty"><td>
-                                    <td><input type="text" name="" id="unit" value="" 
-                                        placeholder="unit"><td>
-                                    <td><input type="text" name="" id="ingredients" value=""
-                                        placeholder="Ingredients"></td>
-                                </tr>
-                            </form>
+                            <tr>
+                                <td><input type="text" value="" placeholder="qty" class="colqty">
+                                </td>
+                                <td><input type="text" value="" placeholder="unit" class="colunit">
+                                </td>
+                                <td><input type="text" value="" placeholder="Ingredients" class="colingred"></td>
+                            </tr>
                         </tbody>
                     </table>
-                    <button>Add step</button>
                 </div>
+                <button style="padding: 5px" onclick="addingredient"> Add step </button>
+
             </div>
 
 
             <div class="rightgroup">
-                <div class="howto">
+                <div id="howto">
                     <label>How to</label>
                     <ul>
                         <li><input type="text" name="" id="howto" placeholder="How to"> </li>
-                        <!-- <li><input type="text" name="" id="howto" placeholder="How to"> </li>
-                        <li><input type="text" name="" id="howto" placeholder="How to"> </li>
-                        <li><input type="text" name="" id="howto" placeholder="How to"> </li>
-                        <li><input type="text" name="" id="howto" placeholder="How to"> </li>
-                        <li><input type="text" name="" id="howto" placeholder="How to"> </li>
-                        <li><input type="text" name="" id="howto" placeholder="How to"> </li>
-                        <li><input type="text" name="" id="howto" placeholder="How to"> </li> -->
                     </ul>
-                    <button>Add step</button>
+
+                    <button style="padding: 5px" onclick="addstep">Add step</button>
+
                 </div>
+            </div>
+
+        </section>
+
+
+        <section class="finaltouch" style="margin: 20px">
+
+            <p id="">
+                <img src="" alt="BILD PÅ MUMSBIT" id="" value="">
+                <button style="width: 60px; align-self: center">Choose picture</button>
+                <button style="width: 60px; align-self: center">Upload picture</button>
+            </p>
+
+            <p>
+                <input type="text" id="" value="" placeholder="Signature">
+                <button>Set signature</button>
+            </p>
+
+
+            <div>
+                <h1>Upload recipe</h1>
+                <input type="submit" value="Submit" onclick="uploadrecipe" style="width: 120px; height: 50px">
             </div>
         </section>
 
-        <div id="submitter">
-            <input type="submit" value="Submit" onclick="uploadrecipe" style="width: 120px; height: 50px">
-            <h1>Upload recipe</h1>
-
-            <button value="Create db and fill form" style="width: 120px; height: 50px;" onclick="fillfromWeb()">Add to
-                DB</button>
-        </div>
+        <button value="Create db and fill form" style="width: 120px; height: 50px;" onclick="fillfromWeb()">Add to DB</button>
+        <button value="" id="loadtemplabel" onclick="getfromDB()" style="height: 80px; width: 100px;">getfromDB<br>add signature</button>
 
         <script src="js/addrecipe.js">
 
