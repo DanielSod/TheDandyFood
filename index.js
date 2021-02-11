@@ -45,8 +45,7 @@ app.get('/recipes/:title', (request, response) => {
   });
 });
 
-<<<<<<< HEAD
-app.get('/recipes/:id', (request, response) => {
+app.get('/recipes/detail/:id', (request, response) => {
   let id = request.params.id;
   recipesDB.findOne({ _id: id }, function (err, data) {
     if (err) {
@@ -59,8 +58,6 @@ app.get('/recipes/:id', (request, response) => {
 
 // app.get('/api/:id', (request, response) => {
 //   let id = request.params.id;
-=======
->>>>>>> dan
 
 
 app.post('/users', (request, response) => {
