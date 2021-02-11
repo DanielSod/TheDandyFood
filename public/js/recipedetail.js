@@ -6,9 +6,9 @@ async function setRecipeData() {
   let id = params.get("id");
 
   const response = await fetch(`/recipes/${id}`);
-  const recipe = await response.json();
+  const data = await response.json();
 
-  console.log(data);
+  let recipe = data[0];
   
   document.querySelector('#recipeTitle').textContent = recipe.Title;
   document.querySelector('#recipeDescription').textContent = recipe.Description;
