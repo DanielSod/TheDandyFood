@@ -27,38 +27,34 @@ app.post('/recipes', (request, response) => {
 
 app.get('/recipes', (request, response) => {
   recipesDB.find({}, function (err, data) {
+    console.log('Alla recept');
     if (err) {
       console.log(err);
     }
-    console.log(output);
   });
 });
 
 app.get('/recipes/:title', (request, response) => {
-  let title = request.params.id;
+  let title = request.params.title;
+
   recipesDB.find({ Title: new RegExp(title) }, function (err, data) {
     if (err) {
       console.log(err);
     }
-    console.log(data);
     response.json(data);
+    console.log(data);
   });
 });
 
-app.get('/recipes/detail/:id', (request, response) => {
+app.get('/detail/:id', (request, response) => {
   let id = request.params.id;
   recipesDB.findOne({ _id: id }, function (err, data) {
     if (err) {
       console.log(err);
     }
-    console.log(data);
     response.json(data);
   });
 });
-
-// app.get('/api/:id', (request, response) => {
-//   let id = request.params.id;
-
 
 app.post('/users', (request, response) => {
   const data = request.body;
@@ -90,17 +86,3 @@ app.get('/users/:id', (request, response) => {
     response.json(data);
   });
 });
-
-
-
-
-// app.get('/api/:id', (request, response) => {
-//   let id = request.params.id;
-
-//   database.findOne({ Username: id }, function (err, data) {
-//     if (err) {
-//       console.log(err);
-//     }
-//     response.json(data);
-//   });
-// });

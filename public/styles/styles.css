@@ -79,6 +79,10 @@ a {
   border-radius: 10px;
 }
 
+.recipe-card p {
+  text-overflow: ellipsis;
+}
+
 .map-section {
   width: 70%;
 }
