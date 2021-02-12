@@ -71,26 +71,40 @@ main {
     padding: 5px;
 }
 
-.finaltouch {
+.picsubmit {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-
-    background: #c95f92;
-    height: auto;
-    padding: 30px;
+    background: white;
+    
 }
 
-#recpic {
-    max-width: 600px;
-    max-height: 300px;
-    
+.picload{
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    background-color: white;
+}
+
+.submit{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    background-color: white;
+    padding: 30px;
 }
 
 #howto {
     display: flex;
     flex-flow: column;
     flex-direction: column;
+}
+
+#chosenpicture {
+display: flex;
+align-self: center;
+width: 200px;
+height: 200px;
 }
 
 label {

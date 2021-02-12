@@ -1,29 +1,9 @@
 //let server = require('../Server/Server.js')
 
-
-
-// let recipeTemp = {
-//   Description: 'Kan detta funka',
-//   Difficulty: '1',
-//   Howto: 'Lägg det på bordet och hacka',
-//   Ingredients: 'mjöl',
-//   PortionSize: '1',
-//   Qty: '1',
-//   Rating: '1',
-//   Recpic: 'en bild',
-//   Signature: 'signatur',
-//   Time: '12',
-//   Title: '1kg mjöl',
-//   Unit: 'kg',
-// };
-
-async function fillfromWeb() {
+async function uploadrecipe() {
   console.log('Data sent');
-  
-  
   let user = localStorage.getItem('loggedInUser');
-  let recipePicture = document.querySelector('#imgthumbnail')
-  
+
   let recipe = {
     Description: document.querySelector('#description').value,
     Difficulty: document.querySelector('#difficulty').value,
@@ -32,14 +12,12 @@ async function fillfromWeb() {
     PortionSize: document.querySelector('#portionSize').value,
     Qty: document.querySelector('#qty').value,
     Rating: document.querySelector('#rating').value,
-    Recpic: recipePicture,
+    Recpic: document.querySelector('#piclink').value,
     Signature: user.Username,
     Time: document.querySelector('#time').value,
     Title: document.querySelector('#title').value,
     Unit: document.querySelector('#unit').value,
   };
-
-  //   recipe = recipeTemp;
 
   const options = {
     method: 'POST',
@@ -51,21 +29,6 @@ async function fillfromWeb() {
   fetch('/recipes', options);
 }
 
-async function getfromDB() {
-  const response = await fetch(`/recipe/${recipeTemp.Title}`);
-  const data = await response.json();
-
-  console.log(data);
-}
-
-function picture(){
-  ('#thumbnail').on('change', function() {
-      var file = $(this).get(0).files;
-      var reader = new FileReader();
-      reader.readAsDataURL(file[0]);
-      reader.addEventListener("load", function(e) {
-      var image = e.target.result;
-  ("#recpic").attr('src', image);
-  });
-  });
+async function clearpage(){
+  await recipe.querySelector.options;
 }
