@@ -85,16 +85,25 @@
 
         <section class="finaltouch" style="margin: 20px">
 
-            <p id="">
+            <div>
                 
-                <img id="recpic" src="" alt="picture"  value="" />
-                <input type="file" accept="image/*" onchange="preview_image(event)">
+                <div class="custom-file ">
+                    <input type="file"  class="custom-file-input" name="thumbnail" id="thumbnail">
+                    <label class="custom-file-label" for="thumbnail">Choose file</label>
+                </div>
+            </div>
+            <div class="img-thumbnail  text-center">
+                <img src="@if(isset($product)) {{asset('storage/'.$product->thumbnail)}} @else {{asset('images/no-thumbnail.jpeg')}} @endif" id="imgthumbnail" class="img-fluid" alt="">
+            </div>
+
+                <!-- <img  src="" alt="picture"  value="" />
+                <input type="file" accept="image/*" onchange="preview_image(event)"> -->
 
 
                 <button style="width: 60px; align-self: center">Choose picture</button>
                 <button style="width: 60px; align-self: center">Upload picture</button>
-            </p>
-
+            
+            </div>
             <p>
                 <input type="text" id="Username" value="Signature" placeholder="Signature">
                 
