@@ -17,11 +17,7 @@ h1 {
 }
 
 header {
-  background-image: linear-gradient(
-    184deg,
-    #1a2238 70%,
-    #ffffff calc(70% + 2px)
-  );
+  background-image: linear-gradient(184deg, #1a2238 70%, #ffffff calc(70% + 2px));
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,8 +25,11 @@ header {
   gap: 40%;
   width: 100%;
   padding: 10px 20px;
-  height: 100%;
   height: 45vh;
+}
+
+header a {
+  text-decoration: none;
 }
 
 header input {
@@ -69,27 +68,30 @@ nav ul a {
   font-size: 16px;
   font-weight: bold;
   transition: all 0.3s;
+  text-decoration: none;
 }
 
 nav ul a:hover {
   color: rgba(255, 255, 255, 1);
 }
 
-.login-page-wrapper {
+/* .login-page-wrapper {
   height: 100vh;
   width: 100%;
   background-color: lightblue;
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
 .login-form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
+  gap: 15px;
+}
+
+.modal-body p {
+  color: black;
 }
 
 .login-credentials-container input {

@@ -1,18 +1,52 @@
-    <!-- <head>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    </head> -->
-    
-    <a href="/index.html">
-        <h1 class="logo">Logo</h1>
-    </a>
-    <nav>
-        <ul>
-            <li><a href="addrecipe.html">Add recipe</a></li>
-            <li><a href="mapview.html">Search</a></li>
-            <li><a href="#">Wishlist</a></li>
-        </ul>
-    </nav>
-    <div>
-        <a href="login.html">Log in</a>
-        <a href="signup.html">Sign up</a>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+
+<a href="/index.html">
+    <h1 class="logo">Logo</h1>
+</a>
+<nav>
+    <ul>
+        <li><a href="addrecipe.html">Add recipe</a></li>
+        <li><a href="mapview.html">Search</a></li>
+        <li><a href="#">Wishlist</a></li>
+    </ul>
+</nav>
+<div>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Log In
+    </button>
+    <!-- <a href="login.html">Log in</a> -->
+    <a href="signup.html">Sign up</a>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Log In</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="login-form" onsubmit="return false">
+                    <div class="form-group">
+                        <input id="loginUsername" class="form-control" name="username" type="text"
+                            placeholder="Username">
+                    </div>
+                    <div class="form-group">
+                        <input id="loginPassword" class="form-control" name="password" type="text"
+                            placeholder="Password">
+                    </div>
+
+                    <Button id="loginSubmit" onclick="submitClicked()" class="btn btn-primary" type="submit"
+                        value="login">Log In</Button>
+                </form>
+                <div class="d-flex flex-column justify-content-center align-items-center mt-3">
+                    <p>Dont have an account?</p>
+                    <a href="signup.html" class="btn btn-primary">Sign Up!</a>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
