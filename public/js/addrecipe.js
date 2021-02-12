@@ -1,23 +1,28 @@
 //let server = require('../Server/Server.js')
 
-let recipeTemp = {
-  Description: 'Kan detta funka',
-  Difficulty: '1',
-  Howto: 'Lägg det på bordet och hacka',
-  Ingredients: 'mjöl',
-  PortionSize: '1',
-  Qty: '1',
-  Rating: '1',
-  Recpic: 'en bild',
-  Signature: 'signatur',
-  Time: '12',
-  Title: '1kg mjöl',
-  Unit: 'kg',
-};
 
-function fillfromWeb() {
+
+// let recipeTemp = {
+//   Description: 'Kan detta funka',
+//   Difficulty: '1',
+//   Howto: 'Lägg det på bordet och hacka',
+//   Ingredients: 'mjöl',
+//   PortionSize: '1',
+//   Qty: '1',
+//   Rating: '1',
+//   Recpic: 'en bild',
+//   Signature: 'signatur',
+//   Time: '12',
+//   Title: '1kg mjöl',
+//   Unit: 'kg',
+// };
+
+async function fillfromWeb() {
   console.log('Data sent');
-  document.querySelector(loggedInUser.Username) = daniel;
+  
+  
+  let user = localStorage.getItem('loggedInUser');
+  let recipePicture = document.querySelector('#imgthumbnail')
   
   let recipe = {
     Description: document.querySelector('#description').value,
@@ -27,8 +32,8 @@ function fillfromWeb() {
     PortionSize: document.querySelector('#portionSize').value,
     Qty: document.querySelector('#qty').value,
     Rating: document.querySelector('#rating').value,
-    Recpic: document.querySelector('#recpic').value,
-    Signature: document.querySelector(loggedInUser.Username),
+    Recpic: recipePicture,
+    Signature: user.Username,
     Time: document.querySelector('#time').value,
     Title: document.querySelector('#title').value,
     Unit: document.querySelector('#unit').value,
@@ -53,21 +58,14 @@ async function getfromDB() {
   console.log(data);
 }
 
-
-async function assignsignature() {
- = loggedInUser.Username;
+function picture(){
+  ('#thumbnail').on('change', function() {
+      var file = $(this).get(0).files;
+      var reader = new FileReader();
+      reader.readAsDataURL(file[0]);
+      reader.addEventListener("load", function(e) {
+      var image = e.target.result;
+  ("#recpic").attr('src', image);
+  });
+  });
 }
-
-// async function loadstuff(){
-//     console.log('Trying to get data');
-//     const response = await fetch('/api');
-
-//     const data = await response.json();
-//     console.log(data);
-// }
-
-// async function blabla() {
-//         const response = await fetch(`/api/${recipeTemp.Title}`);
-//         const data = await response.json();
-//         console.log(data);
-//     }
