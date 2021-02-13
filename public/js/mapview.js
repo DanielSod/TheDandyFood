@@ -3,7 +3,7 @@ async function getRecipes() {
   container.innerHTML = '';
   let searchTerm = document.querySelector('#recipe-search').value;
 
-  let recipeList = [];
+  var recipeList = [];
 
   const response = await fetch(`/recipes/${searchTerm}`);
 
@@ -13,21 +13,27 @@ async function getRecipes() {
   recipeList = data;
 
   for (let i = 0; i < recipeList.length; i++) {
-    clickedRecipe = recipeList[i];
-    console.log(clickedRecipe._id);
     container.innerHTML +=
-      '<div class="recipe-card" onclick="setRecipe(clickedRecipe)"><div>Bild</div><div class="description-container"><h1>' +
+      '<div class="recipe-card"><div>Bild</div><div class="description-container"><h1>' +
       recipeList[i].Title +
       '</h1><p>' +
       recipeList[i].Description +
       '</p></div></div>';
   }
+
+  for (let i = 0; i < container.children.length; i++) {
+    (function (i) {
+      console.log('Inside func');
+      container.children[i].onclick = function () {
+        console.log(i);
+      };
+    });
+  }
 }
 
-function setRecipe(clickedRecipe) {
+function setRecipe() {
   let url = new URL('http://localhost:5500/recipeDetail.html');
-  url.searchParams.append('id', clickedRecipe._id);
-  console.log('Efter', url);
+  url.searchParams.append('id', id);
 
-  document.location.href = url;
+  // document.location.href = url;
 }
