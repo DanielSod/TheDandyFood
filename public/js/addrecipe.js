@@ -1,7 +1,5 @@
 //let server = require('../Server/Server.js')
 
-
-
 // let recipeTemp = {
 //   Description: 'Kan detta funka',
 //   Difficulty: '1',
@@ -19,11 +17,10 @@
 
 async function fillfromWeb() {
   console.log('Data sent');
-  
-  
+
   let user = localStorage.getItem('loggedInUser');
-  let recipePicture = document.querySelector('#imgthumbnail')
-  
+  let recipePicture = document.querySelector('#imgthumbnail');
+
   let recipe = {
     Description: document.querySelector('#description').value,
     Difficulty: document.querySelector('#difficulty').value,
@@ -58,14 +55,27 @@ async function getfromDB() {
   console.log(data);
 }
 
-function picture(){
-  ('#thumbnail').on('change', function() {
-      var file = $(this).get(0).files;
-      var reader = new FileReader();
-      reader.readAsDataURL(file[0]);
-      reader.addEventListener("load", function(e) {
+function picture() {
+  '#thumbnail'.on('change', function () {
+    var file = $(this).get(0).files;
+    var reader = new FileReader();
+    reader.readAsDataURL(file[0]);
+    reader.addEventListener('load', function (e) {
       var image = e.target.result;
-  ("#recpic").attr('src', image);
+      '#recpic'.attr('src', image);
+    });
   });
-  });
+}
+
+function addIngredient() {
+  let form = document.querySelector('#ingredientTable');
+
+  form.innerHTML +=
+    '<td><input id="qty" type="text" value="" placeholder="qty" class="colqty"></td><td><input id="unit" type="text" value="" placeholder="unit" class="colunit"></td><td><input id="ingredients" type="text" value="hej" placeholder="Ingredients"class="colingred"></td>';
+}
+
+function getAllIngredients() {
+  let table = document.querySelector('#ingredientTable');
+
+  console.log(table);
 }
