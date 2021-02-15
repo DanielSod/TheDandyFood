@@ -20,6 +20,18 @@ async function createUser(e) {
   if (inputUsername.value.length < 1) {
     inputUsername.insertAdjacentHTML("afterend", "<span>Username must be longer</span");
   }
+  if (inputRealname.value.length < 1) {
+    inputUsername.insertAdjacentHTML("afterend", "<span>Input cant be empty</span");
+  }
+  if (inputUsername.value.length < 1) {
+    inputUsername.insertAdjacentHTML("afterend", "<span>Username must be longer</span");
+  }
+  if (inputUsername.value.length < 1) {
+    inputUsername.insertAdjacentHTML("afterend", "<span>Username must be longer</span");
+  }
+  if (inputUsername.value.length < 1) {
+    inputUsername.insertAdjacentHTML("afterend", "<span>Username must be longer</span");
+  }
 
 
   const user = {
