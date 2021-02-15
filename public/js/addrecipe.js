@@ -1,5 +1,10 @@
 //let server = require('../Server/Server.js')
 
+const { FileArray } = require("express-fileupload");
+
+
+
+
 async function uploadrecipe() {
   console.log('Data sent');
   let user = localStorage.getItem('loggedInUser');
@@ -29,6 +34,9 @@ async function uploadrecipe() {
   fetch('/recipes', options);
 }
 
-async function clearpage(){
-  await recipe.querySelector.options;
-}
+
+var IngredientstoCook = Array();
+Ingredients.entries(Qty, Unit, Ingredients);
+
+var HowtoCook = Array();
+Howto.entries(Howto);
