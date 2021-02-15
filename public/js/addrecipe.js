@@ -1,13 +1,30 @@
 //let server = require('../Server/Server.js')
 
-const { FileArray } = require("express-fileupload");
-
-
+// let recipeTemp = {
+//   Description: 'Kan detta funka',
+//   Difficulty: '1',
+//   Howto: 'Lägg det på bordet och hacka',
+//   Ingredients: 'mjöl',
+//   PortionSize: '1',
+//   Qty: '1',
+//   Rating: '1',
+//   Recpic: 'en bild',
+//   Signature: 'signatur',
+//   Time: '12',
+//   Title: '1kg mjöl',
+//   Unit: 'kg',
+// };
 
 
 async function uploadrecipe() {
   console.log('Data sent');
+<<<<<<< HEAD
   let user = localStorage.getItem('loggedInUser');
+=======
+
+  let user = localStorage.getItem('loggedInUser');
+  let recipePicture = document.querySelector('#imgthumbnail');
+>>>>>>> master
 
   let recipe = {
     Description: document.querySelector('#description').value,
@@ -38,5 +55,27 @@ async function uploadrecipe() {
 var IngredientstoCook = Array();
 Ingredients.entries(Qty, Unit, Ingredients);
 
-var HowtoCook = Array();
-Howto.entries(Howto);
+function picture() {
+  '#thumbnail'.on('change', function () {
+    var file = $(this).get(0).files;
+    var reader = new FileReader();
+    reader.readAsDataURL(file[0]);
+    reader.addEventListener('load', function (e) {
+      var image = e.target.result;
+      '#recpic'.attr('src', image);
+    });
+  });
+}
+
+function addIngredient() {
+  let form = document.querySelector('#ingredientTable');
+
+  form.innerHTML +=
+    '<td><input id="qty" type="text" value="" placeholder="qty" class="colqty"></td><td><input id="unit" type="text" value="" placeholder="unit" class="colunit"></td><td><input id="ingredients" type="text" value="hej" placeholder="Ingredients"class="colingred"></td>';
+}
+
+function getAllIngredients() {
+  let table = document.querySelector('#ingredientTable');
+
+  console.log(table);
+}

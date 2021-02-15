@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <title>Dandy Food</title>
     <link rel="stylesheet" href="styles/danstyle.css">
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <!-- recipe.db -->
@@ -42,7 +43,6 @@
         <section class="lowersection">
             <div class="leftgroup">
                 <div class="ingredients">
-
                     <table>
                         <thead>
                             <tr>
@@ -52,20 +52,24 @@
                             </tr>
                         </thead>
 
-                        <tbody>
+                        <tbody id="ingredientTable">
                             <tr>
                                 <td><input id="qty" type="text" value="" placeholder="qty" class="colqty">
                                 </td>
                                 <td><input id="unit" type="text" value="" placeholder="unit" class="colunit">
                                 </td>
+<<<<<<< HEAD
                                 <td><input id="ingredients" type="text" value="" placeholder="Ingredients"
+=======
+                                <td><input id="ingredients" type="text" value="hej" placeholder="Ingredients"
+>>>>>>> master
                                         class="colingred"></td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-                <button style="padding: 5px" onclick="addingredient"> Add step </button>
-
+                <button style="padding: 5px" onclick="addIngredient()">Add ingredient</button>
+                <button onclick="getAllIngredients()">Get Values</button>
             </div>
 
 
@@ -76,14 +80,14 @@
                         <li><input type="text" name="" id="howto" placeholder="How to"> </li>
                     </ul>
 
-                    <button style="padding: 5px" onclick="addstep">Add step</button>
-
+                    <button style="padding: 5px" onclick="addStep()">Add step</button>
                 </div>
             </div>
 
         </section>
 
 
+<<<<<<< HEAD
         <section class="picsubmit">
             <div class="picload">
                 <img src="" alt="Bild på mat" id="chosenpicture" >
@@ -95,17 +99,57 @@
 
                 <input id="piclink" type="text" placeholder="URL to picture"
                     style="width: 120px; height: 50px">
+=======
+        <section class="finaltouch" style="margin: 20px">
+
+            <div>
+
+                <div class="custom-file ">
+                    <input type="file" class="custom-file-input" name="thumbnail" id="thumbnail">
+                    <label class="custom-file-label" for="thumbnail">Choose file</label>
+                </div>
+            </div>
+            <div class="img-thumbnail  text-center">
+                <img src="@if(isset($product)) {{asset('storage/'.$product->thumbnail)}} @else {{asset('images/no-thumbnail.jpeg')}} @endif"
+                    id="imgthumbnail" class="img-fluid" alt="">
+            </div>
+
+            <!-- <img  src="" alt="picture"  value="" />
+                <input type="file" accept="image/*" onchange="preview_image(event)"> -->
+>>>>>>> master
 
                 <input type="submit" value="Submit recipe" onclick="uploadrecipe()"
                     style="width: 120px; height: 50px">
 
+<<<<<<< HEAD
                 <button onclick="clearpage()"> Clear page </button>
             </div>
 
         </section>
+=======
+            <button style="width: 60px; align-self: center">Choose picture</button>
+            <button style="width: 60px; align-self: center">Upload picture</button>
+
+            </div>
+            <p>
+                <input type="text" id="Username" value="Signature" placeholder="Signature">
+
+                <button onclick="assignsignature">Set signature</button>
+
+
+            </p>
+>>>>>>> master
 
 
 
+<<<<<<< HEAD
+=======
+        <button value="Create db and fill form" style="width: 120px; height: 50px;" onclick="fillfromWeb()">Add to
+            DB</button>
+        <button value="" id="loadtemplabel" onclick="getfromDB()" style="height: 80px; width: 100px;">getfromDB<br>add
+            signature</button>
+        <label id="Username" placeholder="sign"></label>
+>>>>>>> master
 
         <script src="js/addrecipe.js">
 

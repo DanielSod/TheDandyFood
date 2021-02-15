@@ -79,6 +79,10 @@ a {
   border-radius: 10px;
 }
 
+.recipe-card p {
+  text-overflow: ellipsis;
+}
+
 .map-section {
   width: 70%;
 }
@@ -244,3 +248,5 @@ a {
   border: none;
   background-color: #f4db7d;
 }
+
+/* Add recipe styling */
