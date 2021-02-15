@@ -1,4 +1,27 @@
-async function createUser() {
+async function createUser(e) {
+  e.preventDefualt;
+
+  let signupFormSpans = document.querySelectorAll("#signup-form span");
+
+  console.log(document.querySelectorAll("#signup-form span"));
+
+  if (signupFormSpans) {
+    signupFormSpans.forEach(span => {
+      span.remove();
+    });
+  }
+  
+  let inputUsername = document.querySelector('#edit-username');
+  let inputPassword = document.querySelector('#edit-password');
+  let inputRealname = document.querySelector('#edit-name');
+  let inputEmail = document.querySelector('#edit-email');
+  let inputCountry = document.querySelector('#edit-country');
+  
+  if (inputUsername.value.length < 1) {
+    inputUsername.insertAdjacentHTML("afterend", "<span>Username must be longer</span");
+  }
+
+
   const user = {
     Username: document.querySelector('#edit-username').value,
     Password: document.querySelector('#edit-password').value,

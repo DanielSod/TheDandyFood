@@ -10,16 +10,30 @@
 
 
 <body>
+    <!-- <header>
+        <div class="nav-container"></div>
+    </header> -->
     <div class="page-wrapper">
         <div class="inner-container">
             <h1>Sign Up</h1>
             <form id="signup-form" action="#">
-                <input type="text" id="edit-name" placeholder="Name" required>
-                <input type="email" id="edit-email" placeholder="Email" required>
-                <input type="text" id="edit-country" placeholder="Country" required>
-                <input type="text" id="edit-username" placeholder="Username" required maxlength="10">
-                <input type="password" id="edit-password" placeholder="Password" required>
-                <input type="submit" value="Submit" onclick="createUser()">
+                <div>
+                    <input type="text" id="edit-name" placeholder="Name">
+                </div>
+                <div>
+                    <input type="email" id="edit-email" placeholder="Email">
+                </div>
+               <div>
+                    <input type="text" id="edit-country" placeholder="Country">
+               </div>
+                <div>
+                    <input type="text" id="edit-username" placeholder="Username">
+                </div>
+                <div>
+                    <input type="password" id="edit-password" placeholder="Password">
+                </div>
+               
+                <input type="submit" value="Submit" onclick="createUser(event)">
             </form>
         </div>
     </div>

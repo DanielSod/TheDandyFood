@@ -2,7 +2,6 @@
 window.onload = function(){
 
   getHeader();
-  setLoggedInStatus();
   function getHeader(){
       fetch("./header.html")
       .then(response => {
@@ -12,7 +11,6 @@ window.onload = function(){
         document.querySelector(".nav-container").innerHTML = data;
       });
   }
-
 }
 
 
