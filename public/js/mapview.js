@@ -23,7 +23,6 @@ async function getRecipes() {
 
   for (let i = 0; i < container.children.length; i++) {
     container.children[i].onclick = function () {
-      console.log(i);
       setRecipe(i);
     };
   }

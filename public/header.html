@@ -27,17 +27,16 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form class="login-form" onsubmit="return false">
+                <form class="login-form" onsubmit="submitClicked()">
                     <div class="form-group">
                         <input id="loginUsername" class="form-control" name="username" type="text"
                             placeholder="Username">
                     </div>
                     <div class="form-group">
-                        <input id="loginPassword" class="form-control" name="password" type="text"
+                        <input id="loginPassword" class="form-control" name="password" type="password"
                             placeholder="Password">
                     </div>
-
-                    <Button id="loginSubmit" onclick="submitClicked()" class="btn btn-primary" type="submit"
+                    <Button id="loginSubmit" class="btn btn-primary" type="submit"
                         value="login">Log In</Button>
                 </form>
                 <div class="d-flex flex-column justify-content-center align-items-center mt-3">
