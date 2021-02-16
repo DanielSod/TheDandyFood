@@ -24,14 +24,19 @@
 
             <div>
                 <div class="rightgroup">
+
                     <label>Portions</label>
-                    <input type="number" name="" id="portionSize" placeholder="PortionSize" value="">
+                    <input type="number" name="" id="portionSize"
+                        placeholder="PortionSize" value="12">
+
                     <label>Time</label>
-                    <input type="number" name="" id="cookTime" placeholder="Time">
+                    <input type="number" id="cookTime" placeholder="Time">
+
+                    <label for="signature">Signature</label>
+                    <input type="text" id="signature" >
+
                     <label for="difficulty">Difficulty (between 1 and 5):</label>
                     <input type="range" id="difficulty" name="difficulty" min="1" max="5">
-                    <label>Rating</label>
-                    <input type="number" name="" id="rating" placeholder="Rating" value="1">
 
                 </div>
 
@@ -40,32 +45,41 @@
         </section>
 
 
+
         <section class="middlesection">
             <div class="leftgroup">
                 <div class="ingredients">
                     <table>
                         <thead>
                             <tr>
-                                <th id="colqty"> Qty</th>
-                                <th id="colunit"> Unit</th>
-                                <th id="colingred"> Ingredient</th>
+                                <th id="colQty"> Qty</th>
+                                <th id="colUnit"> Unit</th>
+                                <th id="colIngred"> Ingredient</th>
                             </tr>
                         </thead>
 
-                        <tbody id="ingredientRows">
+                        <tbody id="addIngredientItem">
                             <tr>
-                                <td><input id="qty" type="text" placeholder="qty" class="colqty">
+                                <td><input id="qty" type="text" placeholder=""
+                                    class="colQty">
                                 </td>
-                                <td><input id="unit" type="text" placeholder="unit" class="colunit">
+                                <td><input id="unit" type="text" placeholder=""
+                                    class="colUnit">
                                 </td>
-                                <td><input id="ingredient" type="text" placeholder="Ingredient"
-                                        class="colingred"></td>
+                                <td><input id="ingredient" type="text" placeholder=""
+                                    class="colIngred"></td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-                <button style="padding: 5px" onclick="addIngredientItem()">Add ingredient</button>
-                <button onclick="getAllIngredients()">Get Values</button>
+
+                <button id="addIngredientItem"
+                    onclick="addIngredientItem()">
+                    Add ingredient</button>
+
+                <button id="ingredients"
+                    onclick="getAllIngredients()">
+                    Get Values</button>
             </div>
 
 
@@ -76,7 +90,7 @@
                             <tr>
                                 <th> How to prepare meal</th>
                             </tr>
-                        </thead
+                        </thead>
 
                         <tbody id="howToRows">
                             <tr>
@@ -87,36 +101,44 @@
                         </tbody>
                     </table>
 
-                    <button style="padding: 5px" onclick="addHowToCookRows()">Add step</button>
+                    <button style="padding: 5px" onclick="addHowToCookRows()">
+                        Add step</button>
                 </div>
             </div>
-
         </section>
 
 
         <section class="lowersection">
             <div class="picContainer">
-                <img src="https://www.performinghealth.se/temp/unicorn.jpg" alt="Bild på mat" id="recpic">
+                <img src="https://www.performinghealth.se/temp/unicorn.jpg"
+                    alt="Bild på mat" id="recpic">
             </div>
 
             <div class="picsubmit">
-                <label>Add picture and upload <br>your new recipe </label>
+                <label class="picsubmit" ><h2>Add picture and upload
+                    <br>your new recipe</h2></label>
 
-                <label>URL to picture </label>
-                <input id="recPic" type="text" placeholder="URL to picture"
-                style="width: 275px; height: 50px">
+                <!-- <label for="recPic" class="picsubmit">
+                    URL to picture </label> -->
+                <input class="picsubmit" id="recPic" type="text">
 
-                <label>Submit recipe </label>
-                <input type="submit" value="Submit and upload recipe" onclick="uploadNewRecipe()" style="width: 120px; height: 50px">
+                <!-- <label for="saveRecipeDataBTN" class="picsubmit"></label> -->
 
-                <button id="btnNewIngredRow" onclick="btnClearPage()">Clear page </button>
+                <input class="addrecbtn" id="saveRecipeDataBTN" type="submit"
+                    value="Submit recipe" onclick="uploadrecipe()">
+
+                <button id="postRecipeBTN" class="addrecbtn"
+                    onclick="postRecipe()">
+                    Upload to recipes.db</button>
+
+                <button id="newIngredRowBTN" class="addrecbtn"
+                onclick="getfromDB"> get from db</button>
+                <!-- onclick="btnClearPage()"> -->
+
             </div>
         </section>
-
-        <script src="js/addrecipe.js">
-
-        </script>
     </main>
+    <script src="js/addrecipe.js"></script>
 </body>
 
 </html>

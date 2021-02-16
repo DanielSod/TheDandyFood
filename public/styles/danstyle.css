@@ -23,11 +23,16 @@ main {
     margin-bottom: 50px;
 }
 
+.middlesection {
+    display: flex;
+    justify-content: space-around;
+}
+
 .lowersection {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     margin-bottom: 50px;
-    height: 400px;
 }
 
 .leftgroup {
@@ -53,19 +58,19 @@ main {
 
 
 
-.colqty {
+.colQty {
     max-width: 60px;
     font-weight: 600;
     padding: 5px;
 }
 
-.colunit {
+.colUnit {
     max-width: 60px;
     font-weight: 600;
     padding: 5px;
 }
 
-.colingred {
+.colIngred {
     max-width: 160px;
     font-weight: 600;
     padding: 5px;
@@ -73,10 +78,28 @@ main {
 
 .picsubmit {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
+    align-items: center;
     background: white;
+    padding: 25px;
 
+}
+
+.addrecbtn {
+padding: 20px;
+margin: 10px;
+width: 250px;
+text-align-last:auto;
+}
+
+.picsubmit {
+width: 250px;
+font-size: 16px;
+font-weight: 600;
+align-items: center;
+align-content: center;
+text-align: center;
 }
 
 .picload{
@@ -91,7 +114,7 @@ main {
     flex-direction: column;
     align-self: center;
     background-color: white;
-    padding: 30px;
+    padding: 20px;
 }
 
 #howto {
@@ -103,8 +126,8 @@ main {
 #chosenpicture {
 display: flex;
 align-self: center;
-width: 200px;
-height: 200px;
+width: 300px;
+height: 300px;
 }
 
 label {
