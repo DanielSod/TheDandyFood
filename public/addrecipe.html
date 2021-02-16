@@ -27,7 +27,7 @@
                     <label>Portions</label>
                     <input type="number" name="" id="portionSize" placeholder="PortionSize" value="">
                     <label>Time</label>
-                    <input type="number" name="" id="time" placeholder="Time">
+                    <input type="number" name="" id="cookTime" placeholder="Time">
                     <label for="difficulty">Difficulty (between 1 and 5):</label>
                     <input type="range" id="difficulty" name="difficulty" min="1" max="5">
                     <label>Rating</label>
@@ -40,7 +40,7 @@
         </section>
 
 
-        <section class="lowersection">
+        <section class="middlesection">
             <div class="leftgroup">
                 <div class="ingredients">
                     <table>
@@ -52,104 +52,66 @@
                             </tr>
                         </thead>
 
-                        <tbody id="ingredientTable">
+                        <tbody id="ingredientRows">
                             <tr>
-                                <td><input id="qty" type="text" value="" placeholder="qty" class="colqty">
+                                <td><input id="qty" type="text" placeholder="qty" class="colqty">
                                 </td>
-                                <td><input id="unit" type="text" value="" placeholder="unit" class="colunit">
+                                <td><input id="unit" type="text" placeholder="unit" class="colunit">
                                 </td>
-<<<<<<< HEAD
-                                <td><input id="ingredients" type="text" value="" placeholder="Ingredients"
-=======
-                                <td><input id="ingredients" type="text" value="hej" placeholder="Ingredients"
->>>>>>> master
+                                <td><input id="ingredient" type="text" placeholder="Ingredient"
                                         class="colingred"></td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-                <button style="padding: 5px" onclick="addIngredient()">Add ingredient</button>
+                <button style="padding: 5px" onclick="addIngredientItem()">Add ingredient</button>
                 <button onclick="getAllIngredients()">Get Values</button>
             </div>
 
 
             <div class="rightgroup">
                 <div id="howto">
-                    <label>How to</label>
-                    <ul>
-                        <li><input type="text" name="" id="howto" placeholder="How to"> </li>
-                    </ul>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th> How to prepare meal</th>
+                            </tr>
+                        </thead
 
-                    <button style="padding: 5px" onclick="addStep()">Add step</button>
+                        <tbody id="howToRows">
+                            <tr>
+                                <td><input id="howTo" type="text" value=""
+                                    placeholder="Cooking instructions ">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <button style="padding: 5px" onclick="addHowToCookRows()">Add step</button>
                 </div>
             </div>
 
         </section>
 
 
-<<<<<<< HEAD
-        <section class="picsubmit">
-            <div class="picload">
-                <img src="" alt="Bild på mat" id="chosenpicture" >
+        <section class="lowersection">
+            <div class="picContainer">
+                <img src="https://www.performinghealth.se/temp/unicorn.jpg" alt="Bild på mat" id="recpic">
             </div>
 
-            <div class="submit">
-                <p style="margin-top: 60px; margin-bottom: 60px; text-align: center;">
-                    Upload recipe</p>
+            <div class="picsubmit">
+                <label>Add picture and upload <br>your new recipe </label>
 
-                <input id="piclink" type="text" placeholder="URL to picture"
-                    style="width: 120px; height: 50px">
-=======
-        <section class="finaltouch" style="margin: 20px">
+                <label>URL to picture </label>
+                <input id="recPic" type="text" placeholder="URL to picture"
+                style="width: 275px; height: 50px">
 
-            <div>
+                <label>Submit recipe </label>
+                <input type="submit" value="Submit and upload recipe" onclick="uploadNewRecipe()" style="width: 120px; height: 50px">
 
-                <div class="custom-file ">
-                    <input type="file" class="custom-file-input" name="thumbnail" id="thumbnail">
-                    <label class="custom-file-label" for="thumbnail">Choose file</label>
-                </div>
+                <button id="btnNewIngredRow" onclick="btnClearPage()">Clear page </button>
             </div>
-            <div class="img-thumbnail  text-center">
-                <img src="@if(isset($product)) {{asset('storage/'.$product->thumbnail)}} @else {{asset('images/no-thumbnail.jpeg')}} @endif"
-                    id="imgthumbnail" class="img-fluid" alt="">
-            </div>
-
-            <!-- <img  src="" alt="picture"  value="" />
-                <input type="file" accept="image/*" onchange="preview_image(event)"> -->
->>>>>>> master
-
-                <input type="submit" value="Submit recipe" onclick="uploadrecipe()"
-                    style="width: 120px; height: 50px">
-
-<<<<<<< HEAD
-                <button onclick="clearpage()"> Clear page </button>
-            </div>
-
         </section>
-=======
-            <button style="width: 60px; align-self: center">Choose picture</button>
-            <button style="width: 60px; align-self: center">Upload picture</button>
-
-            </div>
-            <p>
-                <input type="text" id="Username" value="Signature" placeholder="Signature">
-
-                <button onclick="assignsignature">Set signature</button>
-
-
-            </p>
->>>>>>> master
-
-
-
-<<<<<<< HEAD
-=======
-        <button value="Create db and fill form" style="width: 120px; height: 50px;" onclick="fillfromWeb()">Add to
-            DB</button>
-        <button value="" id="loadtemplabel" onclick="getfromDB()" style="height: 80px; width: 100px;">getfromDB<br>add
-            signature</button>
-        <label id="Username" placeholder="sign"></label>
->>>>>>> master
 
         <script src="js/addrecipe.js">
 

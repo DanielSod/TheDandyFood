@@ -18,13 +18,9 @@
 
 async function uploadrecipe() {
   console.log('Data sent');
-<<<<<<< HEAD
-  let user = localStorage.getItem('loggedInUser');
-=======
 
   let user = localStorage.getItem('loggedInUser');
   let recipePicture = document.querySelector('#imgthumbnail');
->>>>>>> master
 
   let recipe = {
     Description: document.querySelector('#description').value,
