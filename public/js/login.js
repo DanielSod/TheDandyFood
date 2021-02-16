@@ -1,47 +1,28 @@
-// window.onload = function () {
-//   const loginForm = document.querySelector('.login-form');
-//   const loginButton = document.querySelector('#loginSubmit');
+async function submitClicked(e) { 
+ 
+    e.preventDefault();
+    const loginForm = document.querySelector('.login-form');
 
-//   if (loginButton != null) {
-//     loginButton.addEventListener('click', async (e) => {
-//       e.preventDefault();
-
-//       console.log('Hej');
-
-//       const username = loginForm.username.value;
-//       const password = loginForm.password.value;
-
-//       const response = await fetch(`/users`);
-
-//       const users = await response.json();
-
-//       users.forEach((user) => {
-//         if (username === user.Username && password === user.Password) {
-//           localStorage.setItem('loggedInUser', JSON.stringify(user));
-//         } else {
-//           console.log('Wrong Username / Password combination');
-//         }
-//       });
-//     });
-//   }
-// };
-
-async function submitClicked() {
-  const loginForm = document.querySelector('.login-form');
-
-  const username = loginForm.username.value;
-  const password = loginForm.password.value;
-
-  const response = await fetch(`/users`);
-
-  const users = await response.json();
-  console.log(users);
+    const username = loginForm.username.value;
+    const password = loginForm.password.value;
+  
+    const response = await fetch(`/users`);
+    const users = await response.json();
+    console.log(users);
+  
+  let userExists = false;
 
   users.forEach((user) => {
     if (username === user.Username && password === user.Password) {
       localStorage.setItem('loggedInUser', JSON.stringify(user));
+      userExists = true;      
     } else {
       console.log('Wrong Username / Password combination');
     }
   });
+
+  // if (userExists == false) {
+  //   console.log("User Not existing");
+  //   e.preventDefault();
+  // }
 }

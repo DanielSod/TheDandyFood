@@ -64,9 +64,9 @@ function picture() {
 }
 
 function addIngredient() {
-  let form = document.querySelector('#ingredientTable');
+  let table = document.querySelector('#ingredientTable');
 
-  form.innerHTML +=
+  table.innerHTML +=
     '<td><input id="qty" type="text" value="" placeholder="qty" class="colqty"></td><td><input id="unit" type="text" value="" placeholder="unit" class="colunit"></td><td><input id="ingredients" type="text" value="hej" placeholder="Ingredients"class="colingred"></td>';
 }
 
