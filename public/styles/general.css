@@ -17,11 +17,7 @@ h1 {
 }
 
 header {
-  background-image: linear-gradient(
-    184deg,
-    #1a2238 70%,
-    #ffffff calc(70% + 2px)
-  );
+  background-image: linear-gradient(184deg, #1a2238 70%, #ffffff calc(70% + 2px));
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -68,15 +64,6 @@ nav ul a:hover {
   color: rgba(255, 255, 255, 1);
 }
 
-/* .login-page-wrapper {
-  height: 100vh;
-  width: 100%;
-  background-color: lightblue;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-
 .login-form {
   display: flex;
   flex-direction: column;
@@ -101,9 +88,4 @@ button {
   border-radius: 10px;
   font-size: 16px;
   border: none;
-}
-
-
-#mapid {
-  height: 180px;
 }

@@ -42,7 +42,11 @@ a {
 }
 
 /* CSS för mapview */
-
+#map {
+  /* height: 100%; */
+  width: 70%;
+  height: 100%;
+}
 
 #recipe-search {
   height: 40px;

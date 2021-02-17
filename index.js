@@ -35,7 +35,6 @@ app.get('/recipes', (request, response) => {
 });
 
 app.get('/recipes/:title', (request, response) => {
-
   let title = request.params.title;
 
   recipesDB.find({ Title: new RegExp(title) }, function (err, data) {
@@ -43,7 +42,6 @@ app.get('/recipes/:title', (request, response) => {
       console.log(err);
     }
     response.json(data);
-    console.log(data);
   });
 });
 

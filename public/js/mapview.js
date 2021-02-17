@@ -1,13 +1,13 @@
 let recipeList = [];
 
 async function getRecipes() {
+  getMap();
 
   let container = document.querySelector('.recipe-card-container');
   container.innerHTML = '';
   let searchTerm = document.querySelector('#recipe-search').value;
 
   const response = await fetch(`/recipes/${searchTerm}`);
-
   const data = await response.json();
   console.log(data);
 
@@ -38,15 +38,22 @@ function setRecipe(i) {
   document.location.href = url;
 }
 
-var map = L.map('map').setView([50.84673, 4.35247], 12);
-var marker = L.marker([50.84673, 4.35247]).addTo(map);
-var popup = marker.bindPopup('<b>Hello world!</b><br />I am a popup.');
+function getMap() {
+  var map = L.map('map').setView([0, 0], 2);
 
-popup.openPopup();
+  var marker = L.marker([50.84673, 4.35247]).addTo(map);
+  var marker = L.marker([50.84673, 4.37]).addTo(map);
+  var marker = L.marker([50.84673, 4.38]).addTo(map);
 
-L.tileLayer('https://tile.openstreetmap.be/osmbe/{z}/{x}/{y}.png', {
+  var popup = marker.bindPopup('<b>Hello world!</b><br />I am a popup.');
+
+  popup.openPopup();
+
+  L.tileLayer('https://tile.openstreetmap.be/osmbe/{z}/{x}/{y}.png', {
     attribution:
-        '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors' +
-        ', Tiles courtesy of <a href="https://geo6.be/">GEO-6</a>',
-    maxZoom: 18
-}).addTo(map);
+      '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors' +
+      ', Tiles courtesy of <a href="https://geo6.be/">GEO-6</a>',
+    minZoom: 2,
+    maxZoom: 20,
+  }).addTo(map);
+}
