@@ -109,6 +109,7 @@ a {
 }
 
 /* CSS för Recipe_Detail*/
+
 .recipe-detail-main {
   background-color: #fff;
   width: 100%;
@@ -204,6 +205,7 @@ a {
 }
 
 /* CSS för formulär */
+
 .page-wrapper {
   min-height: 70vh;
   width: 100%;
@@ -339,5 +341,22 @@ a {
     align-items: center;
     justify-content: center;
     background-color: lightcoral;
+  }
+
+  .inner-container {
+    gap: 20px;
+    width: 50%;
+  }
+
+  #signup-form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 45px;
+  }
+
+  #signup-form div input {
+    margin-bottom: 0px;
   }
 }
