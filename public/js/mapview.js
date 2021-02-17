@@ -14,11 +14,11 @@ async function getRecipes() {
 
   for (let i = 0; i < recipeList.length; i++) {
     container.innerHTML +=
-      '<div class="recipe-card"><div>Bild</div><div class="description-container"><h1>' +
+      '<div class="recipe-card"><div class="description-container"><h2>' +
       recipeList[i].Title +
-      '</h1><p>' +
+      '</h2><p>' +
       recipeList[i].Description +
-      '</p></div></div>';
+      '</p></div><div class="image-container">Bild</div></div>';
   }
 
   for (let i = 0; i < container.children.length; i++) {
