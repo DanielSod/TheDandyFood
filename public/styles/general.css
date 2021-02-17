@@ -17,7 +17,11 @@ h1 {
 }
 
 header {
-  background-image: linear-gradient(184deg, #1a2238 70%, #ffffff calc(70% + 2px));
+  background-image: linear-gradient(
+    184deg,
+    #1a2238 70%,
+    #ffffff calc(70% + 2px)
+  );
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,17 +34,6 @@ header {
 
 header a {
   text-decoration: none;
-}
-
-header input {
-  height: 40px;
-  width: 25%;
-  border: 2px solid #fff;
-  background-color: rgba(255, 255, 255, 0);
-  border-radius: 10px;
-  padding: 10px;
-  color: #fff;
-  font-size: 16px;
 }
 
 header p {
