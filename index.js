@@ -28,7 +28,6 @@ app.post('/recipes', (request, response) => {
 
 app.get('/recipes', (request, response) => {
   recipesDB.find({}, function (err, data) {
-    console.log('Alla recept');
     if (err) {
       console.log(err);
     }

@@ -273,7 +273,7 @@ a {
   margin: 15px 0px;
 }
 
-/* CSS för formulär */
+/* CSS for signup */
 
 .page-wrapper {
   min-height: 70vh;
@@ -334,21 +334,19 @@ a {
   border-radius: 10px;
   height: 45px;
   padding: 10px 10px;
-  margin-bottom: 5px;
+  margin-bottom: 3px;
 }
 
 #signup-form input::placeholder {
   color: #1a2238;
 }
 
-#signup-form button {
-  font-weight: bold;
-  color: #1a2238;
-  height: 50px;
-  width: 5%;
-  border-radius: 50px;
+#signup-form input[type='submit'] {
+  background-color: #1a2238;
+  color: #fff;
   border: none;
-  background-color: #f4db7d;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 /* Add recipe styling */
@@ -443,4 +441,6 @@ a {
   #signup-form div input {
     margin-bottom: 0px;
   }
+
+  /*Add recipe styling*/
 }

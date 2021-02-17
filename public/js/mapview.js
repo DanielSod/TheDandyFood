@@ -14,6 +14,8 @@ let coordinateArray = [
   { lat: 39.639538, long: -119.75081 },
 ];
 
+var map;
+
 async function getRecipes() {
   let container = document.querySelector('.recipe-card-container');
   container.innerHTML = '';
@@ -31,7 +33,7 @@ async function getRecipes() {
       recipeList[i].Title +
       '</h2><p>' +
       recipeList[i].Description +
-      '</p></div><div class="image-container">Bild</div></div>';
+      '</p></div></div>';
   }
 
   for (let i = 0; i < container.children.length; i++) {
@@ -52,7 +54,12 @@ function setRecipe(i) {
 }
 
 function getMap() {
-  var map = L.map('map').setView([0, 0], 2);
+  if (map) {
+    map.off();
+    map.remove();
+  }
+
+  map = L.map('map').setView([0, 0], 2);
 
   for (let i = 0; i < recipeList.length; i++) {
     let coordinateObject = coordinateArray[Math.floor(Math.random() * coordinateArray.length)];

@@ -27,14 +27,14 @@ async function uploadrecipe() {
   };
   console.log(recipe);
 
-  // const options = {
-  //   method: 'POST',
-  //   headers: {
-  //     'Content-Type': 'application/json',
-  //   },
-  //   body: JSON.stringify(recipe),
-  // };
-  // fetch('/recipes', options);
+  const options = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(recipe),
+  };
+  fetch('/recipes', options);
 
   // const data = new Object(recipe);
   // JSON.stringify(recipe);

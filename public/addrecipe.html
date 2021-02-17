@@ -17,7 +17,7 @@
 
         </div>
     </header>
-    <main>
+    <main id="addrecipe-main-wrapper">
         <section class="uppersection">
             <div class="leftgroup">
                 <label>Title</label>
@@ -137,16 +137,20 @@
             </div>
         </section>
 
-        <button value="Create db and fill form" style="width: 120px; height: 50px;" onclick="uploadrecipe()">Add to
-            DB</button>
-        <button value="" id="loadtemplabel" onclick="getfromDB()" style="height: 80px; width: 100px;">getfromDB<br>add
-            signature</button>
-        <label id="Username" placeholder="sign"></label>
+        <div class="button-container">
+            <button value="Create db and fill form" style="width: 120px; height: 50px;" onclick="uploadrecipe()">Add to
+                DB</button>
+            <button value="" id="loadtemplabel" onclick="getfromDB()"
+                style="height: 80px; width: 100px;">getfromDB<br>add
+                signature</button>
+            <label id="Username" placeholder="sign"></label>
+        </div>
 
-        <script src="js/addrecipe.js"></script>
-        <script src="js/header.js"></script>
     </main>
+
+
     <script src="js/addrecipe.js"></script>
+    <script src="js/header.js"></script>
 </body>
 
 </html>
