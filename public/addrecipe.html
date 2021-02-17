@@ -6,11 +6,17 @@
     <title>Dandy Food</title>
     <link rel="stylesheet" href="styles/danstyle.css">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/general.css">
 </head>
 
 <!-- recipe.db -->
 
 <body>
+    <header>
+        <div class="nav-container">
+
+        </div>
+    </header>
     <main>
         <section class="uppersection">
             <div class="leftgroup">
@@ -24,14 +30,19 @@
 
             <div>
                 <div class="rightgroup">
+
                     <label>Portions</label>
-                    <input type="number" name="" id="portionSize" placeholder="PortionSize" value="">
+                    <input type="number" name="" id="portionSize"
+                        placeholder="PortionSize" value="12">
+
                     <label>Time</label>
-                    <input type="number" name="" id="time" placeholder="Time">
+                    <input type="number" id="cookTime" placeholder="Time">
+
+                    <label for="signature">Signature</label>
+                    <input type="text" id="signature" >
+
                     <label for="difficulty">Difficulty (between 1 and 5):</label>
                     <input type="range" id="difficulty" name="difficulty" min="1" max="5">
-                    <label>Rating</label>
-                    <input type="number" name="" id="rating" placeholder="Rating" value="1">
 
                 </div>
 
@@ -40,83 +51,95 @@
         </section>
 
 
-        <section class="lowersection">
+
+        <section class="middlesection">
             <div class="leftgroup">
                 <div class="ingredients">
                     <table>
                         <thead>
                             <tr>
-                                <th id="colqty"> Qty</th>
-                                <th id="colunit"> Unit</th>
-                                <th id="colingred"> Ingredient</th>
+                                <th id="colQty"> Qty</th>
+                                <th id="colUnit"> Unit</th>
+                                <th id="colIngred"> Ingredient</th>
                             </tr>
                         </thead>
 
-                        <tbody id="ingredientTable">
+                        <tbody id="addIngredientItem">
                             <tr>
-                                <td><input id="qty" type="text" value="" placeholder="qty" class="colqty">
+                                <td><input id="qty" type="text" placeholder=""
+                                    class="colQty">
                                 </td>
-                                <td><input id="unit" type="text" value="" placeholder="unit" class="colunit">
+                                <td><input id="unit" type="text" placeholder=""
+                                    class="colUnit">
                                 </td>
-                                <td><input id="ingredients" type="text" value="hej" placeholder="Ingredients"
-                                        class="colingred"></td>
+                                <td><input id="ingredient" type="text" placeholder=""
+                                    class="colIngred"></td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-                <button style="padding: 5px" onclick="addIngredient()">Add ingredient</button>
-                <button onclick="getAllIngredients()">Get Values</button>
+
+                <button id="createIngredientItem"
+                    onclick="createIngredientArr()">
+                    Add ingredient</button>
+
+                <button id="ingredients"
+                    onclick="getAllIngredients()">
+                    Get Values</button>
             </div>
 
 
             <div class="rightgroup">
                 <div id="howto">
-                    <label>How to</label>
-                    <ul>
-                        <li><input type="text" name="" id="howto" placeholder="How to"> </li>
-                    </ul>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th> How to prepare meal</th>
+                            </tr>
+                        </thead>
 
-                    <button style="padding: 5px" onclick="addStep()">Add step</button>
+                        <tbody id="howToRows">
+                            <tr>
+                                <td><input id="howTo" type="text" value="" placeholder="Cooking instructions ">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <button style="padding: 5px" onclick="addHowToCookRows()">
+                        Add step</button>
                 </div>
             </div>
-
         </section>
 
 
-        <section class="finaltouch" style="margin: 20px">
-
-            <div>
-
-                <div class="custom-file ">
-                    <input type="file" class="custom-file-input" name="thumbnail" id="thumbnail">
-                    <label class="custom-file-label" for="thumbnail">Choose file</label>
-                </div>
-            </div>
-            <div class="img-thumbnail  text-center">
-                <img src="@if(isset($product)) {{asset('storage/'.$product->thumbnail)}} @else {{asset('images/no-thumbnail.jpeg')}} @endif"
-                    id="imgthumbnail" class="img-fluid" alt="">
+        <section class="lowersection">
+            <div class="picContainer">
+                <img src="https://www.performinghealth.se/temp/unicorn.jpg"
+                    alt="Bild på mat" id="recpic">
             </div>
 
-            <!-- <img  src="" alt="picture"  value="" />
-                <input type="file" accept="image/*" onchange="preview_image(event)"> -->
+            <div class="picsubmit">
+                <label class="picsubmit" ><h2>Add picture and upload
+                    <br>your new recipe</h2></label>
 
+                <!-- <label for="recPic" class="picsubmit">
+                    URL to picture </label> -->
+                <input class="picsubmit" id="recPic" type="text">
 
-            <button style="width: 60px; align-self: center">Choose picture</button>
-            <button style="width: 60px; align-self: center">Upload picture</button>
+                <!-- <label for="saveRecipeDataBTN" class="picsubmit"></label> -->
 
-            </div>
-            <p>
-                <input type="text" id="Username" value="Signature" placeholder="Signature">
+                <input class="addrecbtn" id="saveRecipeDataBTN" type="submit"
+                    value="Submit recipe" onclick="uploadrecipe()">
 
-                <button onclick="assignsignature">Set signature</button>
+                <button id="postRecipeBTN" class="addrecbtn"
+                    onclick="postRecipe()">
+                    Upload to recipes.db</button>
 
+                <button id="newIngredRowBTN" class="addrecbtn"
+                onclick="getfromDB"> get from db</button>
+                <!-- onclick="btnClearPage()"> -->
 
-            </p>
-
-
-            <div>
-                <h1>Upload recipe</h1>
-                <input type="submit" value="Submit" onclick="uploadrecipe" style="width: 120px; height: 50px">
             </div>
         </section>
 
@@ -126,10 +149,10 @@
             signature</button>
         <label id="Username" placeholder="sign"></label>
 
-        <script src="js/addrecipe.js">
-
-        </script>
+        <script src="js/addrecipe.js"></script>
+        <script src="js/header.js"></script>
     </main>
+    <script src="js/addrecipe.js"></script>
 </body>
 
 </html>

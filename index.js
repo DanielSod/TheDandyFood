@@ -13,7 +13,7 @@ const usersDB = new Datastore('users.db');
 const recipesDB = new Datastore('recipes.db');
 
 recipesDB.loadDatabase();
-console.log('RecipeDB is running');
+console.log('RecipesDB is running');
 usersDB.loadDatabase();
 console.log('UserDB is running');
 
@@ -34,7 +34,7 @@ app.get('/recipes', (request, response) => {
   });
 });
 
-app.get('/recipes/:title', (request, response) => {
+app.post('/recipes/:title', (request, response) => {
   let title = request.params.title;
 
   recipesDB.find({ Title: new RegExp(title) }, function (err, data) {
