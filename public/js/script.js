@@ -34,5 +34,3 @@ async function getSingleUser() {
 //   document.querySelector('#edit-username').value = user.Username;
 //   document.querySelector('#edit-password').value = user.Password;
 // }
-
-
