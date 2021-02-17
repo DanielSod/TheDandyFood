@@ -3,8 +3,6 @@ async function createUser(e) {
 
   let signupFormSpans = document.querySelectorAll('#signup-form span');
 
-  console.log(document.querySelectorAll('#signup-form span'));
-
   if (signupFormSpans) {
     signupFormSpans.forEach((span) => {
       span.remove();
@@ -17,12 +15,7 @@ async function createUser(e) {
   let inputEmail = document.querySelector('#edit-email');
   let inputCountry = document.querySelector('#edit-country');
 
-  // let emailInput = inputEmail.value;
-  // let re = new RegExp(
-  //   "(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*)@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])).){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)])"
-  // );
-
-  // re.test(emailInput);
+  let re = new RegExp(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$/);
 
   if (inputUsername.value.length < 1) {
     inputUsername.insertAdjacentHTML('afterend', '<span>Username must be longer</span');
@@ -30,19 +23,16 @@ async function createUser(e) {
   if (inputRealname.value.length < 1) {
     inputRealname.insertAdjacentHTML('afterend', '<span>Input cant be empty</span');
   }
-  if (inputEmail.value.length < 1) {
-    inputEmail.insertAdjacentHTML('afterend', '<span>Username must be longer</span');
-  }
-  if (inputCountry.value.length < 1) {
-    inputCountry.insertAdjacentHTML('afterend', '<span>Username must be longer</span');
+  if (re.test(inputEmail.value) == false) {
+    inputEmail.insertAdjacentHTML('afterend', '<span>Email is in wrong format</span');
   }
 
   const user = {
-    Username: document.querySelector('#edit-username').value,
-    Password: document.querySelector('#edit-password').value,
-    Realname: document.querySelector('#edit-name').value,
-    Email: document.querySelector('#edit-email').value,
-    Country: document.querySelector('#edit-country').value,
+    Username: inputUsername.value,
+    Password: inputPassword.value,
+    Realname: inputRealname.value,
+    Email: inputEmail.value,
+    Country: inputCountry.value,
     Favorites: [],
   };
 
