@@ -1,4 +1,4 @@
-const { table } = require("console");
+// const { table } = require('console');
 
 //let server = require('../Server/Server.js')
 async function uploadrecipe() {
@@ -6,30 +6,38 @@ async function uploadrecipe() {
 
   let user = localStorage.getItem('loggedInUser');
 
-  var addIngredient = ['#qty'+'#unit'+'#ingredient'];
+  var addIngredient = ['#qty' + '#unit' + '#ingredient'];
   var addingHowTo = ['#howTo'];
-  var ingredientList = ('#Qty' ,'#Unit','#Ingredient');
-
+  var ingredientList = ('#Qty', '#Unit', '#Ingredient');
 
   const recipe = {
-    Title: document.querySelector("#title").value,
-    Country: document.querySelector("#country").value,
-    Description: document.querySelector("#description").value,
-    PortionSize: document.querySelector("#portionSize").value,
-    CookTime: document.querySelector("#cookTime").value,
-    Signature: document.querySelector("#signature").value,
-    RecPic: document.querySelector("#recPic").value,
-    Difficulty: document.querySelector("#difficulty").value,
-    HowTo: document.querySelector("#howTo").value,
-    Ingredient: document.querySelector("#ingredient").value,
-    Unit: document.querySelector("#unit").value,
-    Qty: document.querySelector("#qty").value
+    Title: document.querySelector('#title').value,
+    Country: document.querySelector('#country').value,
+    Description: document.querySelector('#description').value,
+    PortionSize: document.querySelector('#portionSize').value,
+    CookTime: document.querySelector('#cookTime').value,
+    Signature: document.querySelector('#signature').value,
+    RecPic: document.querySelector('#recPic').value,
+    Difficulty: document.querySelector('#difficulty').value,
+    HowTo: document.querySelector('#howTo').value,
+    Ingredient: document.querySelector('#ingredient').value,
+    Unit: document.querySelector('#unit').value,
+    Qty: document.querySelector('#qty').value,
   };
-  addEventListener
+  console.log(recipe);
 
-  const data = new Object(recipe);
-  JSON.stringify(recipe);
-  console.log(data)
+  const options = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(recipe),
+  };
+  fetch('/recipes', options);
+
+  // const data = new Object(recipe);
+  // JSON.stringify(recipe);
+  // console.log(data);
 }
 
 function picture() {
@@ -44,29 +52,25 @@ function picture() {
   });
 }
 
- TODO//--!!!:: //Rör ej koden ovanför här ::!!!--TODO
-//_____________________________________________________
+// TODO; //--!!!:: //Rör ej koden ovanför här ::!!!--TODO
+// //_____________________________________________________
 
-
-TODO //ingredientArray och How To Arraya
+// TODO; //ingredientArray och How To Arraya
 
 function createIngredientArr() {
   let ingredientArray = [];
   this.Ingredient.ingredientArray.append(Ingredient);
-  ingredientArray = document.querySelector('#ingredientTable')
+  ingredientArray = document.querySelector('#ingredientTable');
 
   ingredientArray.innerHtml +=
-  '<td><input id="qty" type="text" class="colqty"></td><td><input id="unit" type="text" class="colunit"></td><td><input id="ingredients" type="text" class="colingred"></td>';
-};
-
-
+    '<td><input id="qty" type="text" class="colqty"></td><td><input id="unit" type="text" class="colunit"></td><td><input id="ingredients" type="text" class="colingred"></td>';
+}
 
 function addHowToCookRows() {
   let howToArr = [];
 
-howToArr.innerHtml +=
-    '<tr><td><input type="text" id="howTo"></input></td></tr>'};
-
+  howToArr.innerHtml += '<tr><td><input type="text" id="howTo"></input></td></tr>';
+}
 
 function displayIngredientArr() {
   return ingredientArray;
@@ -75,7 +79,6 @@ function displayIngredientArr() {
 function displayHowToArr() {
   return ingredientArray;
 }
-
 
 // TODO: addIngredient
 //  async function addIngredient() {
@@ -104,7 +107,6 @@ function displayHowToArr() {
 //     else response.sendStatus( 200 );
 //   });
 // });
-
 
 // async function getfromDB() {
 //   const response = await fetch(`/recipe/${recipeTemp.Title[1]}`);
