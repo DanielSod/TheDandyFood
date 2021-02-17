@@ -43,9 +43,9 @@ a {
 
 /* CSS för mapview */
 #map {
-  /* height: 100%; */
   width: 70%;
   height: 100%;
+  background-color: transparent;
 }
 
 #recipe-search {
@@ -62,7 +62,7 @@ a {
 .mapview-container {
   display: flex;
   width: 100%;
-  min-height: 100vh;
+  min-height: 80vh;
 }
 
 .mapview-container section {
@@ -78,17 +78,18 @@ a {
 .recipe-card-container {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   width: 30%;
-  height: 100vh;
+  max-height: 70vh;
   overflow: auto;
+  overflow-x: hidden;
   gap: 25px;
 }
 
 .recipe-card {
   display: grid;
-  grid-template-columns: 40% 60%;
+  grid-template-columns: 60% 40%;
   width: 80%;
   height: 150px;
   padding: 10px;
@@ -98,7 +99,13 @@ a {
 }
 
 .recipe-card p {
+  white-space: nowrap;
   text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.recipe-card h2 {
+  font-size: 1.5rem;
 }
 
 .map-section {
@@ -303,6 +310,7 @@ a {
   .mapview-container {
     display: flex;
     flex-direction: column;
+    gap: 50px;
   }
 
   .recipe-card-container {

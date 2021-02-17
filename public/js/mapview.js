@@ -1,8 +1,20 @@
 let recipeList = [];
 
-async function getRecipes() {
-  getMap();
+let coordinateArray = [
+  { lat: 57.7087, long: 11.9751 },
+  { lat: 48.864716, long: 2.349014 },
+  { lat: 13.923404, long: 30.84822 },
+  { lat: -10.833306, long: -57.79459 },
+  { lat: 21.943046, long: 46.337393 },
+  { lat: 40.178873, long: -2.562423 },
+  { lat: 34.016242, long: 112.475274 },
+  { lat: 61.438767, long: 100.474262 },
+  { lat: 64.472794, long: 27.652233 },
+  { lat: 36.03133, long: -80.349519 },
+  { lat: 39.639538, long: -119.75081 },
+];
 
+async function getRecipes() {
   let container = document.querySelector('.recipe-card-container');
   container.innerHTML = '';
   let searchTerm = document.querySelector('#recipe-search').value;
@@ -27,6 +39,7 @@ async function getRecipes() {
       setRecipe(i);
     };
   }
+  getMap();
 }
 
 function setRecipe(i) {
@@ -41,13 +54,18 @@ function setRecipe(i) {
 function getMap() {
   var map = L.map('map').setView([0, 0], 2);
 
-  var marker = L.marker([50.84673, 4.35247]).addTo(map);
-  var marker = L.marker([50.84673, 4.37]).addTo(map);
-  var marker = L.marker([50.84673, 4.38]).addTo(map);
-
-  var popup = marker.bindPopup('<b>Hello world!</b><br />I am a popup.');
+  for (let i = 0; i < recipeList.length; i++) {
+    let coordinateObject = coordinateArray[Math.floor(Math.random() * coordinateArray.length)];
+    var marker = L.marker([coordinateObject.lat, coordinateObject.long]).addTo(map);
+    var popup = marker.bindPopup(recipeList[i].Title);
+  }
 
   popup.openPopup();
+
+  map.setMaxBounds([
+    [84.67351256610522, -174.0234375],
+    [-58.995311187950925, 223.2421875],
+  ]);
 
   L.tileLayer('https://tile.openstreetmap.be/osmbe/{z}/{x}/{y}.png', {
     attribution:
