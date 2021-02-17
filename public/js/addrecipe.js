@@ -4,7 +4,8 @@
 async function uploadrecipe() {
   console.log('Data sent');
 
-  let user = localStorage.getItem('loggedInUser');
+  const user = JSON.parse(localStorage.getItem('loggedInUser'));
+  console.log(user.Username);
 
   var addIngredient = ['#qty' + '#unit' + '#ingredient'];
   var addingHowTo = ['#howTo'];
@@ -16,7 +17,7 @@ async function uploadrecipe() {
     Description: document.querySelector('#description').value,
     PortionSize: document.querySelector('#portionSize').value,
     CookTime: document.querySelector('#cookTime').value,
-    Signature: document.querySelector('#signature').value,
+    Signature: user.Username,
     RecPic: document.querySelector('#recPic').value,
     Difficulty: document.querySelector('#difficulty').value,
     HowTo: document.querySelector('#howTo').value,
@@ -26,14 +27,14 @@ async function uploadrecipe() {
   };
   console.log(recipe);
 
-  const options = {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(recipe),
-  };
-  fetch('/recipes', options);
+  // const options = {
+  //   method: 'POST',
+  //   headers: {
+  //     'Content-Type': 'application/json',
+  //   },
+  //   body: JSON.stringify(recipe),
+  // };
+  // fetch('/recipes', options);
 
   // const data = new Object(recipe);
   // JSON.stringify(recipe);
