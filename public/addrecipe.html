@@ -32,14 +32,13 @@
                 <div class="rightgroup">
 
                     <label>Portions</label>
-                    <input type="number" name="" id="portionSize"
-                        placeholder="PortionSize" value="12">
+                    <input type="number" name="" id="portionSize" placeholder="PortionSize" value="12">
 
                     <label>Time</label>
                     <input type="number" id="cookTime" placeholder="Time">
 
                     <label for="signature">Signature</label>
-                    <input type="text" id="signature" >
+                    <input type="text" id="signature">
 
                     <label for="difficulty">Difficulty (between 1 and 5):</label>
                     <input type="range" id="difficulty" name="difficulty" min="1" max="5">
@@ -66,25 +65,20 @@
 
                         <tbody id="addIngredientItem">
                             <tr>
-                                <td><input id="qty" type="text" placeholder=""
-                                    class="colQty">
+                                <td><input id="qty" type="text" placeholder="" class="colQty">
                                 </td>
-                                <td><input id="unit" type="text" placeholder=""
-                                    class="colUnit">
+                                <td><input id="unit" type="text" placeholder="" class="colUnit">
                                 </td>
-                                <td><input id="ingredient" type="text" placeholder=""
-                                    class="colIngred"></td>
+                                <td><input id="ingredient" type="text" placeholder="" class="colIngred"></td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
 
-                <button id="createIngredientItem"
-                    onclick="createIngredientArr()">
+                <button id="createIngredientItem" onclick="createIngredientArr()">
                     Add ingredient</button>
 
-                <button id="ingredients"
-                    onclick="getAllIngredients()">
+                <button id="ingredients" onclick="getAllIngredients()">
                     Get Values</button>
             </div>
 
@@ -115,13 +109,15 @@
 
         <section class="lowersection">
             <div class="picContainer">
-                <img src="https://www.performinghealth.se/temp/unicorn.jpg"
-                    alt="Bild på mat" id="recpic">
+                <img src="https://www.performinghealth.se/temp/unicorn.jpg" alt="Bild på mat" id="recpic">
             </div>
 
             <div class="picsubmit">
-                <label class="picsubmit" ><h2>Add picture and upload
-                    <br>your new recipe</h2></label>
+                <label class="picsubmit">
+                    <h2>Add picture and upload
+                        <br>your new recipe
+                    </h2>
+                </label>
 
                 <!-- <label for="recPic" class="picsubmit">
                     URL to picture </label> -->
@@ -129,21 +125,19 @@
 
                 <!-- <label for="saveRecipeDataBTN" class="picsubmit"></label> -->
 
-                <input class="addrecbtn" id="saveRecipeDataBTN" type="submit"
-                    value="Submit recipe" onclick="uploadrecipe()">
+                <input class="addrecbtn" id="saveRecipeDataBTN" type="submit" value="Submit recipe"
+                    onclick="uploadrecipe()">
 
-                <button id="postRecipeBTN" class="addrecbtn"
-                    onclick="postRecipe()">
+                <button id="postRecipeBTN" class="addrecbtn" onclick="postRecipe()">
                     Upload to recipes.db</button>
 
-                <button id="newIngredRowBTN" class="addrecbtn"
-                onclick="getfromDB"> get from db</button>
+                <button id="newIngredRowBTN" class="addrecbtn" onclick="getfromDB"> get from db</button>
                 <!-- onclick="btnClearPage()"> -->
 
             </div>
         </section>
 
-        <button value="Create db and fill form" style="width: 120px; height: 50px;" onclick="fillfromWeb()">Add to
+        <button value="Create db and fill form" style="width: 120px; height: 50px;" onclick="uploadrecipe()">Add to
             DB</button>
         <button value="" id="loadtemplabel" onclick="getfromDB()" style="height: 80px; width: 100px;">getfromDB<br>add
             signature</button>

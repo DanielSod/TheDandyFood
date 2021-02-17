@@ -19,6 +19,7 @@ console.log('UserDB is running');
 
 app.post('/recipes', (request, response) => {
   const data = request.body;
+  console.log(data);
   recipesDB.insert(data);
   response.json({
     status: 'success',
