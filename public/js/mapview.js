@@ -1,6 +1,7 @@
 let recipeList = [];
 
 async function getRecipes() {
+  console.log("hej");
   let container = document.querySelector('.recipe-card-container');
   container.innerHTML = '';
   let searchTerm = document.querySelector('#recipe-search').value;
