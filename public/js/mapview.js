@@ -23,7 +23,6 @@ async function getRecipes() {
 
   const response = await fetch(`/recipes/${searchTerm}`);
   const data = await response.json();
-  console.log(data);
 
   recipeList = data;
 

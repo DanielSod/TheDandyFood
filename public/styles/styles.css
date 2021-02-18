@@ -353,7 +353,7 @@ a {
 
 /* CSS for media queries */
 
-@media only screen and (min-width: 576px) and (max-width: 769px) {
+@media only screen and (max-width: 769px) {
   .teaser-section {
     flex-direction: column-reverse;
   }
@@ -463,5 +463,3 @@ a {
     justify-content: space-between;
   }
 }
-
-@media only screen and (max-width: 576px);
