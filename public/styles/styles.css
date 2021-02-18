@@ -442,5 +442,24 @@ a {
     margin-bottom: 0px;
   }
 
-  /*Add recipe styling*/
+  /*Recipe Detail styling*/
+  .recipe-info-container {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 90%;
+  }
+
+  .recipe-info-container img {
+    width: 70%;
+  }
+
+  .recipe-info-text {
+    max-width: 100%;
+    margin-top: 5rem;
+  }
+
+  .howto-container {
+    width: 90%;
+    justify-content: space-between;
+  }
 }
