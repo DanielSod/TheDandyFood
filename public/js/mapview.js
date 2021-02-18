@@ -47,8 +47,7 @@ function setRecipe(i) {
   id = recipeList[i]._id;
   let url = new URL('http://localhost:5500/recipeDetail.html');
   url.searchParams.append('id', id);
-
-  console.log(id);
+  
   document.location.href = url;
 }
 
